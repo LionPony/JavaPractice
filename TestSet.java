@@ -1,5 +1,5 @@
+//Set of Tests("Codingtest Start Lecture" from school.programmers.co.kr)
 import java.util.Scanner;
-
 public class TestSet {
     public static void main(String[] args){
         test1();
