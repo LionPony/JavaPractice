@@ -12,6 +12,7 @@ public class TestSet {
         main.test6(3, 2);
         main.test7(2, 3);
         main.test8(7, 3);
+        main.test9(91);
     }
     //Divide test(num1/num2). It returns share.
     public void test1(int num1, int num2){
@@ -99,6 +100,17 @@ public class TestSet {
             System.out.println("Test8 : PASS");
         } else {
             System.out.println("Test8 : X");
+        }
+    }
+    //0 < angle <= 180. Classify angles acute, right, obtuse, square
+    public void test9(int angle){
+        protractor ca = new protractor();
+        int test = ca.classify(angle);
+        int answer = 3;
+        if (answer == test) {
+            System.out.println("Test9 : PASS");
+        } else {
+            System.out.println("Test9 : X");
         }
     }
 }
