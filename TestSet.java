@@ -11,8 +11,9 @@ public class TestSet {
         main.test5(40);
         main.test6(3, 2);
         main.test7(2, 3);
-        main.test8(7, 3);
-        main.test9(91);
+        main.test8(7, 3, 2333);
+        main.test9(91, 3);
+        main.test10(4, 6);
     }
     //Divide test(num1/num2). It returns share.
     public void test1(int num1, int num2){
@@ -92,10 +93,9 @@ public class TestSet {
         }
     }
     //Divide Example Test( num1/num2 * 1000 ). returns only integer.
-    public void test8(int num1, int num2){
+    public void test8(int num1, int num2, int answer){
         Divide div = new Divide();
         int test = div.divideTestExample(num1, num2);
-        int answer = 2333;
         if (answer == test) {
             System.out.println("Test8 : PASS");
         } else {
@@ -103,14 +103,23 @@ public class TestSet {
         }
     }
     //0 < angle <= 180. Classify angles acute, right, obtuse, square
-    public void test9(int angle){
+    public void test9(int angle, int answer){
         Protractor ca = new Protractor();
         int test = ca.classify(angle);
-        int answer = 3;
         if (answer == test) {
             System.out.println("Test9 : PASS");
         } else {
             System.out.println("Test9 : X");
+        }
+    }
+    //Add all evens lower than parameter
+    public void test10(int num, int answer){
+        Addition add = new Addition();
+        int test = add.addAllEvens(num);
+        if (answer == test) {
+            System.out.println("Test10 : PASS");
+        } else {
+            System.out.println("Test10 : X");
         }
     }
 }
