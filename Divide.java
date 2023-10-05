@@ -4,4 +4,7 @@ public class Divide {
     public static int share(int num1, int num2){
         return num1/num2;
     }
+    public static int remains(int num1, int num2){
+        return num1%num2;
+    }
 }

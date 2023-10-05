@@ -1,7 +1,6 @@
 //Set of Tests("Coding test Start Lecture" from school.programmers.co.kr)
 import java.time.LocalDate;
-import java.util.Calendar;
-import java.util.Scanner;
+
 public class TestSet {
     public static void main(String[] args){
         test1(2, 3);
@@ -9,6 +8,7 @@ public class TestSet {
         test3(3, 3);
         test4(3, 3);
         test5(40);
+        test6(3, 2);
     }
 
     //Divide test(num1/num2). It returns share.
@@ -64,6 +64,16 @@ public class TestSet {
         }
         else{
             System.out.println("Test5 : X");
+        }
+    }
+
+    //Divide test(num1%num2)
+    public static void test6(int num1, int num2) {
+        int answer = (num1%num2) == Divide.remains(num1, num2) ? 1 : -1;
+        if (answer == 1) {
+            System.out.println("Test6 : PASS");
+        } else {
+            System.out.println("Test6 : X");
         }
     }
 }
