@@ -11,6 +11,7 @@ public class TestSet {
         main.test5(40);
         main.test6(3, 2);
         main.test7(2, 3);
+        main.test8(7, 3);
     }
     //Divide test(num1/num2). It returns share.
     public void test1(int num1, int num2){
@@ -79,6 +80,7 @@ public class TestSet {
             System.out.println("Test6 : X");
         }
     }
+    //Addition test(num1+num2)
     public void test7(int num1, int num2) {
         Addition add = new Addition();
         int answer = (num1+num2) == add.sum(num1, num2) ? 1 : -1;
@@ -86,6 +88,17 @@ public class TestSet {
             System.out.println("Test7 : PASS");
         } else {
             System.out.println("Test7 : X");
+        }
+    }
+    //Divide Example Test( num1/num2 * 1000 ). returns only integer.
+    public void test8(int num1, int num2){
+        Divide div = new Divide();
+        int test = div.divideTestExample(num1, num2);
+        int answer = 2333;
+        if (answer == test) {
+            System.out.println("Test8 : PASS");
+        } else {
+            System.out.println("Test8 : X");
         }
     }
 }
