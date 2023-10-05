@@ -15,6 +15,7 @@ public class TestSet {
         main.test9(91, 3);
         main.test10(4, 6);
         main.test11(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 5.5);
+        main.test12(64, 6, 768000);
     }
     //Divide test(num1/num2). It returns share.
     public void test1(int num1, int num2){
@@ -131,6 +132,18 @@ public class TestSet {
             System.out.println("Test11 : PASS");
         } else {
             System.out.println("Test11 : X");
+        }
+    }
+    //Calculate cost of meal. lamb skewers 12,000won, beverage 2,000won.
+    //If u have 10 skewers, 1 beverage is free.
+    //0<n<1000, n/10 <= k < 1000
+    public void test12(int n, int k, int answer){
+        LambSkewers ls = new LambSkewers();
+        int test = ls.sum(n, k);
+        if (answer == test) {
+            System.out.println("Test12 : PASS");
+        } else {
+            System.out.println("Test12 : X");
         }
     }
 }
