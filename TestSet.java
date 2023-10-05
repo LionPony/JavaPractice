@@ -104,7 +104,7 @@ public class TestSet {
     }
     //0 < angle <= 180. Classify angles acute, right, obtuse, square
     public void test9(int angle){
-        protractor ca = new protractor();
+        Protractor ca = new Protractor();
         int test = ca.classify(angle);
         int answer = 3;
         if (answer == test) {

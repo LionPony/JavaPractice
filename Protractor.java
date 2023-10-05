@@ -1,5 +1,5 @@
 //Start of Coding test problem:protractor
-public class protractor {
+public class Protractor {
     //Classify angle.
     public int classify(int angle){
         if(angle < 90){
