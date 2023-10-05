@@ -1,3 +1,4 @@
 # JavaPractice
 # literally use for personal java practice
-# tests from school.programmers.co.kr
+# Tests from school.programmers.co.kr
+# Based on TDD(Test Driven Development)
