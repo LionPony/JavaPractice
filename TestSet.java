@@ -14,6 +14,7 @@ public class TestSet {
         main.test8(7, 3, 2333);
         main.test9(91, 3);
         main.test10(4, 6);
+        main.test11(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 5.5);
     }
     //Divide test(num1/num2). It returns share.
     public void test1(int num1, int num2){
@@ -120,6 +121,16 @@ public class TestSet {
             System.out.println("Test10 : PASS");
         } else {
             System.out.println("Test10 : X");
+        }
+    }
+    //Average array of integer
+    public void test11(int[] numbers, double answer){
+        Addition add = new Addition();
+        double test = add.averageArray(numbers);
+        if (answer == test) {
+            System.out.println("Test11 : PASS");
+        } else {
+            System.out.println("Test11 : X");
         }
     }
 }

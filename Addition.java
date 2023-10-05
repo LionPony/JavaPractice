@@ -14,4 +14,12 @@ public class Addition {
         }
         return sum;
     }
+    //Return array`s average by double
+    public double averageArray(int[] numbers) {
+        double sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+        return sum/numbers.length;
+    }
 }
