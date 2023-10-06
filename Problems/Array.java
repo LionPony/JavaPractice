@@ -73,6 +73,6 @@ public class Array {
     //Find median.
     public int median(int[] array) {
         array = bubbleSort(array, array.length);
-        return array[(int)array.length/2];
+        return array[array.length/2];
     }
 }
