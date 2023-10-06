@@ -1,7 +1,7 @@
 //Set of Tests("Coding test Start Lecture" from school.programmers.co.kr)
 import Operator.*;
-import Operator.Boolean;
 import Problems.*;
+import Operator.Boolean;
 import java.time.LocalDate;
 import java.util.Arrays;
 
@@ -26,6 +26,7 @@ public class TestSet {
         main.test16(new int[]{1, 2, 3, 4, 5}, new int[]{5, 4, 3, 2, 1});
         main.test17(new int[]{1, 1, 2, 3, 4, 5}, 1, 2);
         main.test18(new int[]{149, 180, 1922, 170}, 167, 3);
+        main.test19(9, 2, 1, 3, new int[]{29, 6});
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -215,6 +216,16 @@ public class TestSet {
             System.out.println("Test18 : PASS");
         } else {
             System.out.println("Test18 : X");
+        }
+    }
+    //
+    private void test19(int numer1, int denom1, int numer2, int denom2, int[] answer) {
+        Fraction fr = new Fraction();
+        int[] test = fr.add(numer1, denom1, numer2, denom2);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test19 : PASS");
+        } else {
+            System.out.println("Test19 : X");
         }
     }
 }
