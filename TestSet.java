@@ -16,6 +16,7 @@ public class TestSet {
         main.test10(4, 6);
         main.test11(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 5.5);
         main.test12(64, 6, 768000);
+        main.test13("happy birthday!", 30);
     }
     //Divide test(num1/num2). It returns share.
     public void test1(int num1, int num2){
@@ -144,6 +145,17 @@ public class TestSet {
             System.out.println("Test12 : PASS");
         } else {
             System.out.println("Test12 : X");
+        }
+    }
+    //Figure out how much length you need to write message.
+    //Space is 2cm, 1 <= message <= 50
+    public void test13(String message, int answer){
+        Letter letter = new Letter();
+        int test = letter.length(message);
+        if (answer == test) {
+            System.out.println("Test13 : PASS");
+        } else {
+            System.out.println("Test13 : X");
         }
     }
 }
