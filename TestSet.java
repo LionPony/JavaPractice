@@ -20,6 +20,7 @@ public class TestSet {
         main.test13("happy birthday!", 30);
         main.test14(new int[]{2, 4}, 1);
         main.test15(new int[]{1, 2, 3, 4, 5}, new int[]{2, 3});
+        main.test16(new int[]{1, 2, 3, 4, 5}, new int[]{5, 4, 3, 2, 1});
     }
     //Divide test(num1/num2). It returns share.
     public void test1(int num1, int num2){
@@ -138,9 +139,7 @@ public class TestSet {
             System.out.println("Test11 : X");
         }
     }
-    //Calculate cost of meal. lamb skewers 12,000won, beverage 2,000won.
-    //If u have 10 skewers, 1 beverage is free.
-    //0<n<1000, n/10 <= k < 1000
+    //Calculate cost of meal(LambSkewers).
     public void test12(int n, int k, int answer){
         LambSkewers ls = new LambSkewers();
         int test = ls.sum(n, k);
@@ -151,7 +150,6 @@ public class TestSet {
         }
     }
     //Figure out how much length you need to write message.
-    //Space is 2cm, 1 <= message <= 50
     public void test13(String message, int answer){
         Letter letter = new Letter();
         int test = letter.length(message);
@@ -179,6 +177,16 @@ public class TestSet {
             System.out.println("Test15 : PASS");
         } else {
             System.out.println("Test15 : X");
+        }
+    }
+    //Make integer array reversed.
+    public void test16(int[] num_list, int[] answer){
+        ArrayReverse ar = new ArrayReverse();
+        int[] test = ar.reverseArray(num_list);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test16 : PASS");
+        } else {
+            System.out.println("Test16 : X");
         }
     }
 }
