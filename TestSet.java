@@ -1,5 +1,6 @@
 //Set of Tests("Coding test Start Lecture" from school.programmers.co.kr)
 import java.time.LocalDate;
+import java.util.Arrays;
 
 public class TestSet {
     public static void main(String[] args){
@@ -18,6 +19,7 @@ public class TestSet {
         main.test12(64, 6, 768000);
         main.test13("happy birthday!", 30);
         main.test14(new int[]{2, 4}, 1);
+        main.test15(new int[]{1, 2, 3, 4, 5}, new int[]{2, 3});
     }
     //Divide test(num1/num2). It returns share.
     public void test1(int num1, int num2){
@@ -159,6 +161,7 @@ public class TestSet {
             System.out.println("Test13 : X");
         }
     }
+    //Figure out dot`s quadrant.
     public void test14(int[] dot, int answer){
         Coordinates co = new Coordinates();
         int test = co.figureQuadrant(dot);
@@ -166,6 +169,16 @@ public class TestSet {
             System.out.println("Test14 : PASS");
         } else {
             System.out.println("Test14 : X");
+        }
+    }
+    //Figure out how many even and odd are included in list.
+    public void test15(int[] num_list, int[] answer){
+        NumsEvenOdd neo = new NumsEvenOdd();
+        int[] test = neo.countEvenOdd(num_list);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test15 : PASS");
+        } else {
+            System.out.println("Test15 : X");
         }
     }
 }
