@@ -25,6 +25,7 @@ public class TestSet {
         main.test15(new int[]{1, 2, 3, 4, 5}, new int[]{2, 3});
         main.test16(new int[]{1, 2, 3, 4, 5}, new int[]{5, 4, 3, 2, 1});
         main.test17(new int[]{1, 1, 2, 3, 4, 5}, 1, 2);
+        main.test18(new int[]{149, 180, 1922, 170}, 167, 3);
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -203,6 +204,17 @@ public class TestSet {
             System.out.println("Test17 : PASS");
         } else {
             System.out.println("Test17 : X");
+        }
+    }
+    //Count bigger than given height in array
+    private void test18(int[] array, int height, int answer) {
+        Array countBig = new Array();
+        int test = countBig.countBigger(array, height);
+        if(test == answer)
+        {
+            System.out.println("Test18 : PASS");
+        } else {
+            System.out.println("Test18 : X");
         }
     }
 }

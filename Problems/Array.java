@@ -36,4 +36,14 @@ public class Array {
         }
         return count;
     }
+    //Count bigger integer in array.
+    public int countBigger(int[] array, int height) {
+        int count = 0;
+        for(int i : array){
+            if(i > height){
+                count++;
+            }
+        }
+        return count;
+    }
 }
