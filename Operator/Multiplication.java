@@ -1,3 +1,5 @@
+package Operator;
+
 //Set of multiplication functions.
 public class Multiplication {
     //num1, num2 are integer(0~100). returns num1 times num2

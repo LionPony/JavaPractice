@@ -1,3 +1,5 @@
+package Problems;
+
 //https://school.programmers.co.kr/learn/courses/30/lessons/120830
 //0<n<1000, n/10 <= k < 1000
 public class LambSkewers {

@@ -1,4 +1,6 @@
-//Start of Coding test problem:protractor
+package Problems;
+
+//Start of Coding test problem:Protractor
 public class Protractor {
     //Classify angle.
     public int classify(int angle){

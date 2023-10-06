@@ -1,4 +1,7 @@
 //Set of Tests("Coding test Start Lecture" from school.programmers.co.kr)
+import Operator.*;
+import Operator.Boolean;
+import Problems.*;
 import java.time.LocalDate;
 import java.util.Arrays;
 
@@ -22,7 +25,7 @@ public class TestSet {
         main.test15(new int[]{1, 2, 3, 4, 5}, new int[]{2, 3});
         main.test16(new int[]{1, 2, 3, 4, 5}, new int[]{5, 4, 3, 2, 1});
     }
-    //Divide test(num1/num2). It returns share.
+    //Operator.Divide test(num1/num2). It returns share.
     public void test1(int num1, int num2){
         Divide div = new Divide();
         int answer = (num1/num2) == div.share(num1, num2) ? 1:-1;
@@ -33,7 +36,7 @@ public class TestSet {
             System.out.println("Test1 : X");
         }
     }
-    //Subtraction test(num1 - num2)
+    //Operator.Subtraction test(num1 - num2)
     public void test2(int num1, int num2){
         Subtraction sub = new Subtraction();
         int answer = (num1-num2) == sub.sub(num1, num2) ? 1:-1;
@@ -44,9 +47,9 @@ public class TestSet {
             System.out.println("Test2 : X");
         }
     }
-    //Boolean test(num1 == num2)
+    //Operator.Boolean test(num1 == num2)
     public void test3(int num1, int num2){
-        Boolean boo = new Boolean();
+        Boolean boo = new Operator.Boolean();
         int answer = (num1==num2 ? 1:-1) == boo.same(num1, num2) ? 1:-1;
         if(answer == 1){
             System.out.println("Test3 : PASS");
@@ -55,7 +58,7 @@ public class TestSet {
             System.out.println("Test3 : X");
         }
     }
-    //Multiplication test(num1 * num2)
+    //Operator.Multiplication test(num1 * num2)
     public void test4(int num1, int num2){
         Multiplication mul = new Multiplication();
         int answer = (num1*num2) == mul.times(num1, num2) ? 1:-1;
@@ -79,7 +82,7 @@ public class TestSet {
             System.out.println("Test5 : X");
         }
     }
-    //Divide test(num1%num2)
+    //Operator.Divide test(num1%num2)
     public void test6(int num1, int num2) {
         Divide div = new Divide();
         int answer = (num1%num2) == div.remains(num1, num2) ? 1 : -1;
@@ -89,7 +92,7 @@ public class TestSet {
             System.out.println("Test6 : X");
         }
     }
-    //Addition test(num1+num2)
+    //Operator.Addition test(num1+num2)
     public void test7(int num1, int num2) {
         Addition add = new Addition();
         int answer = (num1+num2) == add.sum(num1, num2) ? 1 : -1;
@@ -99,7 +102,7 @@ public class TestSet {
             System.out.println("Test7 : X");
         }
     }
-    //Divide Example Test( num1/num2 * 1000 ). returns only integer.
+    //Operator.Divide Example Test( num1/num2 * 1000 ). returns only integer.
     public void test8(int num1, int num2, int answer){
         Divide div = new Divide();
         int test = div.divideTestExample(num1, num2);
@@ -139,7 +142,7 @@ public class TestSet {
             System.out.println("Test11 : X");
         }
     }
-    //Calculate cost of meal(LambSkewers).
+    //Calculate cost of meal(Problems.LambSkewers).
     public void test12(int n, int k, int answer){
         LambSkewers ls = new LambSkewers();
         int test = ls.sum(n, k);

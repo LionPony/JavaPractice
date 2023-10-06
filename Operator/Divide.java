@@ -1,3 +1,5 @@
+package Operator;
+
 //Set of divide functions.
 public class Divide {
     //num1, num2 are 0~100 integer and this function returns share.

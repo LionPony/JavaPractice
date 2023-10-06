@@ -1,3 +1,5 @@
+package Problems;
+
 //https://school.programmers.co.kr/learn/courses/30/lessons/120898
 public class Letter {
     static int space = 2;

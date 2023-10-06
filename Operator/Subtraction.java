@@ -1,3 +1,5 @@
+package Operator;
+
 //Set of subtraction functions.
 public class Subtraction {
     //num1, num2 are integer. return num1 - num2. integer range -50000 <=, <=50000

@@ -1,3 +1,5 @@
+package Problems;
+
 //https://school.programmers.co.kr/learn/courses/30/lessons/120821
 public class ArrayReverse {
     //Make array of integers order reversed.

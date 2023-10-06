@@ -1,3 +1,5 @@
+package Operator;
+
 //Set of addition functions.
 public class Addition {
     //Add num1, num2
