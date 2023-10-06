@@ -27,6 +27,7 @@ public class TestSet {
         main.test17(new int[]{1, 1, 2, 3, 4, 5}, 1, 2);
         main.test18(new int[]{149, 180, 1922, 170}, 167, 3);
         main.test19(9, 2, 1, 3, new int[]{29, 6});
+        main.test20(new int[]{1, 2, 3, 4, 5}, new int[]{2, 4, 6, 8, 10});
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -218,7 +219,7 @@ public class TestSet {
             System.out.println("Test18 : X");
         }
     }
-    //
+    //Add 2 fraction.
     private void test19(int numer1, int denom1, int numer2, int denom2, int[] answer) {
         Fraction fr = new Fraction();
         int[] test = fr.add(numer1, denom1, numer2, denom2);
@@ -226,6 +227,16 @@ public class TestSet {
             System.out.println("Test19 : PASS");
         } else {
             System.out.println("Test19 : X");
+        }
+    }
+    //Make array ingredients double(x2).
+    private void test20(int[] numbers, int[] answer) {
+        Array ar = new Array();
+        int[] test = ar.makeDouble(numbers);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test20 : PASS");
+        } else {
+            System.out.println("Test20 : X");
         }
     }
 }

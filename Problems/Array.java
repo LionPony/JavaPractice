@@ -46,4 +46,12 @@ public class Array {
         }
         return count;
     }
+    //Make array ingredients double.
+    public int[] makeDouble(int[] numbers) {
+        int[] answer = new int[numbers.length];
+        for(int i = 0; i < numbers.length; i++){
+            answer[i] = numbers[i]*2;
+        }
+        return answer;
+    }
 }
