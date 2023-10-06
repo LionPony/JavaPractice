@@ -24,7 +24,11 @@ public class TestSet {
         main.test14(new int[]{2, 4}, 1);
         main.test15(new int[]{1, 2, 3, 4, 5}, new int[]{2, 3});
         main.test16(new int[]{1, 2, 3, 4, 5}, new int[]{5, 4, 3, 2, 1});
+        main.test17(new int[]{1, 1, 2, 3, 4, 5}, 1, 2);
     }
+
+
+
     //Operator.Divide test(num1/num2). It returns share.
     public void test1(int num1, int num2){
         Divide div = new Divide();
@@ -174,8 +178,8 @@ public class TestSet {
     }
     //Figure out how many even and odd are included in list.
     public void test15(int[] num_list, int[] answer){
-        NumsEvenOdd neo = new NumsEvenOdd();
-        int[] test = neo.countEvenOdd(num_list);
+        Array ceo = new Array();
+        int[] test = ceo.countEvenOdd(num_list);
         if (Arrays.equals(test, answer)) {
             System.out.println("Test15 : PASS");
         } else {
@@ -184,12 +188,15 @@ public class TestSet {
     }
     //Make integer array reversed.
     public void test16(int[] num_list, int[] answer){
-        ArrayReverse ar = new ArrayReverse();
+        Array ar = new Array();
         int[] test = ar.reverseArray(num_list);
         if (Arrays.equals(test, answer)) {
             System.out.println("Test16 : PASS");
         } else {
             System.out.println("Test16 : X");
         }
+    }
+    private void test17(int[] array, int n, int answer) {
+
     }
 }
