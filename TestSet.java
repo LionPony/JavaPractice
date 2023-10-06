@@ -28,7 +28,9 @@ public class TestSet {
         main.test18(new int[]{149, 180, 1922, 170}, 167, 3);
         main.test19(9, 2, 1, 3, new int[]{29, 6});
         main.test20(new int[]{1, 2, 3, 4, 5}, new int[]{2, 4, 6, 8, 10});
+        main.test21(new int[]{1, 2, 7, 10, 11}, 7);
     }
+
 
     //Operator.Divide test(num1/num2). It returns share.
     public void test1(int num1, int num2){
@@ -237,6 +239,16 @@ public class TestSet {
             System.out.println("Test20 : PASS");
         } else {
             System.out.println("Test20 : X");
+        }
+    }
+    //Find median
+    private void test21(int[] array, int answer) {
+        Array ar = new Array();
+        int test = ar.median(array);
+        if (answer == test) {
+            System.out.println("Test21 : PASS");
+        } else {
+            System.out.println("Test21 : X");
         }
     }
 }
