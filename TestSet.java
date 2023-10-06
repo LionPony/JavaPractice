@@ -17,6 +17,7 @@ public class TestSet {
         main.test11(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 5.5);
         main.test12(64, 6, 768000);
         main.test13("happy birthday!", 30);
+        main.test14(new int[]{2, 4}, 1);
     }
     //Divide test(num1/num2). It returns share.
     public void test1(int num1, int num2){
@@ -156,6 +157,15 @@ public class TestSet {
             System.out.println("Test13 : PASS");
         } else {
             System.out.println("Test13 : X");
+        }
+    }
+    public void test14(int[] dot, int answer){
+        Coordinates co = new Coordinates();
+        int test = co.figureQuadrant(dot);
+        if (answer == test) {
+            System.out.println("Test14 : PASS");
+        } else {
+            System.out.println("Test14 : X");
         }
     }
 }
