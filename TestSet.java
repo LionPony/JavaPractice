@@ -28,9 +28,8 @@ public class TestSet {
         main.test18(new int[]{149, 180, 1922, 170}, 167, 3);
         main.test19(9, 2, 1, 3, new int[]{29, 6});
         main.test20(new int[]{1, 2, 3, 4, 5}, new int[]{2, 4, 6, 8, 10});
-        main.test21(new int[]{1, 2, 7, 10, 11}, 7);
+        main.test21(new int[]{9, -1, 0}, 0);
     }
-
 
     //Operator.Divide test(num1/num2). It returns share.
     public void test1(int num1, int num2){
