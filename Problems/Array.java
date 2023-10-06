@@ -1,5 +1,4 @@
 //Set of array functions to solve problems.
-
 package Problems;
 
 public class Array {
@@ -25,5 +24,16 @@ public class Array {
             }
         }
         return new int[]{countEven, countOdd};
+    }
+    //Count n in array.
+    public int count(int[] array, int n) {
+        int count = 0;
+        for(int i : array)
+        {
+            if(i == n){
+                count++;
+            }
+        }
+        return count;
     }
 }

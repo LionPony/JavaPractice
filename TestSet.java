@@ -27,8 +27,6 @@ public class TestSet {
         main.test17(new int[]{1, 1, 2, 3, 4, 5}, 1, 2);
     }
 
-
-
     //Operator.Divide test(num1/num2). It returns share.
     public void test1(int num1, int num2){
         Divide div = new Divide();
@@ -196,7 +194,15 @@ public class TestSet {
             System.out.println("Test16 : X");
         }
     }
+    //Count integer n in array.
     private void test17(int[] array, int n, int answer) {
-
+        Array countInteger = new Array();
+        int test = countInteger.count(array, n);
+        if(test == answer)
+        {
+            System.out.println("Test17 : PASS");
+        } else {
+            System.out.println("Test17 : X");
+        }
     }
 }
