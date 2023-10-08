@@ -1,7 +1,7 @@
 //Set of Tests("Coding test Start Lecture" from school.programmers.co.kr)
 import DataStructure.Array;
 import Operator.*;
-import Problems.*;
+import ProblemsLv0.*;
 import Operator.Boolean;
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -32,6 +32,8 @@ public class TestSet {
         main.test20(new int[]{1, 2, 3, 4, 5}, new int[]{2, 4, 6, 8, 10});
         main.test21(new int[]{9, -1, 0}, 0);
         main.test22(new int[]{1, 2, 3, 3, 3, 4}, 3);
+        main.test23(10, new int[]{1, 3, 5, 7, 9});
+        main.test24(15, 3);
     }
     //Operator.Divide test(num1/num2). It returns share.
     public void test1(int num1, int num2){
@@ -260,6 +262,26 @@ public class TestSet {
             System.out.println("Test22 : PASS");
         } else {
             System.out.println("Test22 : X");
+        }
+    }
+    //Make odd array. odds are positive integer and under parameter n.
+    private void test23(int n , int[] answer){
+        HateEven hE = new HateEven();
+        int[] test = hE.makeOddArray(n);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test23 : PASS");
+        } else {
+            System.out.println("Test23 : X");
+        }
+    }
+    //Pizza divide (1)
+    private void test24(int n, int answer) {
+        PizzaDivide pD = new PizzaDivide();
+        int test = pD.howManyPlate(n);
+        if (test == answer) {
+            System.out.println("Test24 : PASS");
+        } else {
+            System.out.println("Test24 : X");
         }
     }
 }

@@ -1,4 +1,4 @@
-package Problems;
+package ProblemsLv0;
 
 //Start of Coding test problem:Protractor
 public class Protractor {

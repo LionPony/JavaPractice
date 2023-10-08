@@ -1,5 +1,5 @@
 //Set of fraction array to solve problems.
-package Problems;
+package ProblemsLv0;
 
 public class Fraction {
     //Add 2 fraction. Parameter is seperated fraction.
