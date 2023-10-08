@@ -6,9 +6,10 @@ public class PizzaDivide {
     //Count how many plate to serve people. Pizza divided 7.
     public int howManyPlate(int n) {
         int plate = 0;
+        int pcs = 7;
         while(n > 0){
             plate++;
-            n -= 7;
+            n -= pcs;
         }
         return plate;
     }
@@ -16,6 +17,15 @@ public class PizzaDivide {
     public int equalPlate(int n) {
         int pcs = 6;
         return getLCM(pcs, n)/pcs;
+    }
+    //Count how many plate to serve people. Pizza pieces are given by parameter.
+    public int howManyPlate(int n, int pcs) {
+        int plate = 0;
+        while(n > 0){
+            plate++;
+            n -= pcs;
+        }
+        return plate;
     }
     //Get least common multiple
     public int getLCM(int num1, int num2){

@@ -35,6 +35,7 @@ public class TestSet {
         main.test23(10, new int[]{1, 3, 5, 7, 9});
         main.test24(15, 3);
         main.test25(10, 5);
+        main.test26(7, 10, 2);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -285,7 +286,6 @@ public class TestSet {
             System.out.println("Test24 : X");
         }
     }
-
     //Pizza divide (2)
     private void test25(int n, int answer) {
         PizzaDivide pD = new PizzaDivide();
@@ -296,4 +296,15 @@ public class TestSet {
             System.out.println("Test25 : X");
         }
     }
+    //Pizza divide (3)
+    private void test26(int slice, int n, int answer) {
+        PizzaDivide pD = new PizzaDivide();
+        int test = pD.howManyPlate(n, slice);
+        if (test == answer) {
+            System.out.println("Test26 : PASS");
+        } else {
+            System.out.println("Test26 : X");
+        }
+    }
+
 }
