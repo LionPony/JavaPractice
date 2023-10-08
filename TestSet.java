@@ -29,6 +29,7 @@ public class TestSet {
         main.test19(9, 2, 1, 3, new int[]{29, 6});
         main.test20(new int[]{1, 2, 3, 4, 5}, new int[]{2, 4, 6, 8, 10});
         main.test21(new int[]{9, -1, 0}, 0);
+        main.test22(new int[]{1, 2, 3, 3, 3, 4}, 3);
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -248,6 +249,16 @@ public class TestSet {
             System.out.println("Test21 : PASS");
         } else {
             System.out.println("Test21 : X");
+        }
+    }
+    //Find mode in integer array
+    private void test22(int[] array, int answer){
+        Array ar = new Array();
+        int test = ar.mode(array);
+        if (answer == test) {
+            System.out.println("Test22 : PASS");
+        } else {
+            System.out.println("Test22 : X");
         }
     }
 }

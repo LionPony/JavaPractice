@@ -75,4 +75,39 @@ public class Array {
         array = bubbleSort(array, array.length);
         return array[array.length/2];
     }
+    // Find mode.
+    public int mode(int[] array){
+        //Preprocess making hashmap
+        int[] index = new int[max(array)+1];
+        for(int i : array){
+            index[i]++;
+        }
+
+        int modeCount = max(index);
+
+        //Exception Handling if modes are more than 2.
+        if(count(index, modeCount) >= 2){
+            return -1;
+        }
+        return findKeyByValue(index, modeCount);
+    }
+    //Find value in key array. If couldn`t find return -1.
+    public int findKeyByValue(int[] array, int value){
+        for(int i = 0; i < array.length; i++) {
+            if(array[i] == value){
+                return i;
+            }
+        }
+        return -1;
+    }
+    //Find max in array
+    public int max(int[] array){
+        int max = 0;
+        for(int i : array){
+            if( i > max){
+                max = i;
+            }
+        }
+        return max;
+    }
 }
