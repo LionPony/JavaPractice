@@ -36,6 +36,7 @@ public class TestSet {
         main.test24(15, 3);
         main.test25(10, 5);
         main.test26(7, 10, 2);
+        main.test27(new String[]{"We", "are", "the", "world!"}, new int[] {2, 3, 3, 6});
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -306,5 +307,14 @@ public class TestSet {
             System.out.println("Test26 : X");
         }
     }
-
+    //Figure out elements(string) length.
+    private void test27(String[] strlist , int[] answer){
+        Array arraySet = new Array();
+        int[] test = arraySet.lengthElements(strlist);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test27 : PASS");
+        } else {
+            System.out.println("Test27 : X");
+        }
+    }
 }

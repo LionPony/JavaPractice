@@ -110,4 +110,12 @@ public class Array {
         }
         return max;
     }
+    //Figure string elements length and return it integer array.
+    public int[] lengthElements(String[] strlist) {
+        DynamicIntArray answer = new DynamicIntArray();
+        for(String i : strlist){
+            answer.append(i.length());
+        }
+        return answer.getIntArray();
+    }
 }
