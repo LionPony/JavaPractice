@@ -1,5 +1,5 @@
 //Set of array functions to solve problems.
-package Problems;
+package DataStructure;
 
 public class Array {
     //Make integer array reversed.

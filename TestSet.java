@@ -1,4 +1,5 @@
 //Set of Tests("Coding test Start Lecture" from school.programmers.co.kr)
+import DataStructure.Array;
 import Operator.*;
 import Problems.*;
 import Operator.Boolean;
@@ -6,6 +7,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 
 public class TestSet {
+    //Test
     public static void main(String[] args){
         TestSet main = new TestSet();
         main.test1(2, 3);
@@ -31,7 +33,6 @@ public class TestSet {
         main.test21(new int[]{9, -1, 0}, 0);
         main.test22(new int[]{1, 2, 3, 3, 3, 4}, 3);
     }
-
     //Operator.Divide test(num1/num2). It returns share.
     public void test1(int num1, int num2){
         Divide div = new Divide();
