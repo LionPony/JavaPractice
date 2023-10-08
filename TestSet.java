@@ -34,9 +34,10 @@ public class TestSet {
         main.test22(new int[]{1, 2, 3, 3, 3, 4}, 3);
         main.test23(10, new int[]{1, 3, 5, 7, 9});
         main.test24(15, 3);
+        main.test25(10, 5);
     }
     //Operator.Divide test(num1/num2). It returns share.
-    public void test1(int num1, int num2){
+    private void test1(int num1, int num2){
         Divide div = new Divide();
         int answer = (num1/num2) == div.share(num1, num2) ? 1:-1;
         if(answer == 1){
@@ -47,7 +48,7 @@ public class TestSet {
         }
     }
     //Operator.Subtraction test(num1 - num2)
-    public void test2(int num1, int num2){
+    private void test2(int num1, int num2){
         Subtraction sub = new Subtraction();
         int answer = (num1-num2) == sub.sub(num1, num2) ? 1:-1;
         if(answer == 1){
@@ -58,7 +59,7 @@ public class TestSet {
         }
     }
     //Operator.Boolean test(num1 == num2)
-    public void test3(int num1, int num2){
+    private void test3(int num1, int num2){
         Boolean boo = new Operator.Boolean();
         int answer = (num1==num2 ? 1:-1) == boo.same(num1, num2) ? 1:-1;
         if(answer == 1){
@@ -69,7 +70,7 @@ public class TestSet {
         }
     }
     //Operator.Multiplication test(num1 * num2)
-    public void test4(int num1, int num2){
+    private void test4(int num1, int num2){
         Multiplication mul = new Multiplication();
         int answer = (num1*num2) == mul.times(num1, num2) ? 1:-1;
         if(answer == 1){
@@ -80,7 +81,7 @@ public class TestSet {
         }
     }
     //Get year when born.
-    public void test5(int age){
+    private void test5(int age){
         PrintAge pa = new PrintAge();
         LocalDate now = LocalDate.now();
         int thisYear = now.getYear();
@@ -93,7 +94,7 @@ public class TestSet {
         }
     }
     //Operator.Divide test(num1%num2)
-    public void test6(int num1, int num2) {
+    private void test6(int num1, int num2) {
         Divide div = new Divide();
         int answer = (num1%num2) == div.remains(num1, num2) ? 1 : -1;
         if (answer == 1) {
@@ -103,7 +104,7 @@ public class TestSet {
         }
     }
     //Operator.Addition test(num1+num2)
-    public void test7(int num1, int num2) {
+    private void test7(int num1, int num2) {
         Addition add = new Addition();
         int answer = (num1+num2) == add.sum(num1, num2) ? 1 : -1;
         if (answer == 1) {
@@ -113,7 +114,7 @@ public class TestSet {
         }
     }
     //Operator.Divide Example Test( num1/num2 * 1000 ). returns only integer.
-    public void test8(int num1, int num2, int answer){
+    private void test8(int num1, int num2, int answer){
         Divide div = new Divide();
         int test = div.divideTestExample(num1, num2);
         if (answer == test) {
@@ -123,7 +124,7 @@ public class TestSet {
         }
     }
     //0 < angle <= 180. Classify angles acute, right, obtuse, square
-    public void test9(int angle, int answer){
+    private void test9(int angle, int answer){
         Protractor ca = new Protractor();
         int test = ca.classify(angle);
         if (answer == test) {
@@ -133,7 +134,7 @@ public class TestSet {
         }
     }
     //Add all evens lower than parameter
-    public void test10(int num, int answer){
+    private void test10(int num, int answer){
         Addition add = new Addition();
         int test = add.addAllEvens(num);
         if (answer == test) {
@@ -143,7 +144,7 @@ public class TestSet {
         }
     }
     //Average array of integer
-    public void test11(int[] numbers, double answer){
+    private void test11(int[] numbers, double answer){
         Addition add = new Addition();
         double test = add.averageArray(numbers);
         if (answer == test) {
@@ -153,7 +154,7 @@ public class TestSet {
         }
     }
     //Calculate cost of meal(Problems.LambSkewers).
-    public void test12(int n, int k, int answer){
+    private void test12(int n, int k, int answer){
         LambSkewers ls = new LambSkewers();
         int test = ls.sum(n, k);
         if (answer == test) {
@@ -163,7 +164,7 @@ public class TestSet {
         }
     }
     //Figure out how much length you need to write message.
-    public void test13(String message, int answer){
+    private void test13(String message, int answer){
         Letter letter = new Letter();
         int test = letter.length(message);
         if (answer == test) {
@@ -173,7 +174,7 @@ public class TestSet {
         }
     }
     //Figure out dot`s quadrant.
-    public void test14(int[] dot, int answer){
+    private void test14(int[] dot, int answer){
         Coordinates co = new Coordinates();
         int test = co.figureQuadrant(dot);
         if (answer == test) {
@@ -183,7 +184,7 @@ public class TestSet {
         }
     }
     //Figure out how many even and odd are included in list.
-    public void test15(int[] num_list, int[] answer){
+    private void test15(int[] num_list, int[] answer){
         Array ceo = new Array();
         int[] test = ceo.countEvenOdd(num_list);
         if (Arrays.equals(test, answer)) {
@@ -193,7 +194,7 @@ public class TestSet {
         }
     }
     //Make integer array reversed.
-    public void test16(int[] num_list, int[] answer){
+    private void test16(int[] num_list, int[] answer){
         Array ar = new Array();
         int[] test = ar.reverseArray(num_list);
         if (Arrays.equals(test, answer)) {
@@ -282,6 +283,17 @@ public class TestSet {
             System.out.println("Test24 : PASS");
         } else {
             System.out.println("Test24 : X");
+        }
+    }
+
+    //Pizza divide (2)
+    private void test25(int n, int answer) {
+        PizzaDivide pD = new PizzaDivide();
+        int test = pD.equalPlate(n);
+        if (test == answer) {
+            System.out.println("Test25 : PASS");
+        } else {
+            System.out.println("Test25 : X");
         }
     }
 }
