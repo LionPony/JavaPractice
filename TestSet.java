@@ -40,6 +40,7 @@ public class TestSet {
         main.test28(20, 6);
         main.test29(150000, 142500);
         main.test30(5500, new int[]{1, 0});
+        main.test31("jaron", "noraj");
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -348,6 +349,16 @@ public class TestSet {
             System.out.println("Test30 : PASS");
         } else {
             System.out.println("Test30 : X");
+        }
+    }
+    //Make String reversed.
+    private void test31(String my_string, String answer){
+        StringReverse strReverse = new StringReverse();
+        String test = strReverse.reverse(my_string);
+        if (test.equals(answer)) {
+            System.out.println("Test31 : PASS");
+        } else {
+            System.out.println("Test31 : X");
         }
     }
 }
