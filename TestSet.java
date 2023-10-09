@@ -38,6 +38,7 @@ public class TestSet {
         main.test26(7, 10, 2);
         main.test27(new String[]{"We", "are", "the", "world!"}, new int[] {2, 3, 3, 6});
         main.test28(20, 6);
+        main.test29(150000, 142500);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -326,6 +327,16 @@ public class TestSet {
             System.out.println("Test28 : PASS");
         } else {
             System.out.println("Test28 : X");
+        }
+    }
+    //Check out price automatically
+    private void test29(int price , int result){
+        ClothingStore clothingStore = new ClothingStore();
+        int test = clothingStore.discount(price);
+        if (test == result) {
+            System.out.println("Test29 : PASS");
+        } else {
+            System.out.println("Test29 : X");
         }
     }
 }
