@@ -41,6 +41,7 @@ public class TestSet {
         main.test29(150000, 142500);
         main.test30(5500, new int[]{1, 0});
         main.test31("jaron", "noraj");
+        main.test32("hello", 3, "hhheeellllllooo");
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -353,12 +354,22 @@ public class TestSet {
     }
     //Make String reversed.
     private void test31(String my_string, String answer){
-        StringReverse strReverse = new StringReverse();
+        StringProblem strReverse = new StringProblem();
         String test = strReverse.reverse(my_string);
         if (test.equals(answer)) {
             System.out.println("Test31 : PASS");
         } else {
             System.out.println("Test31 : X");
+        }
+    }
+    //n times string.
+    private void test32(String my_string, int n, String answer){
+        StringProblem strTimes = new StringProblem();
+        String test = strTimes.nTimesString(my_string, n);
+        if (test.equals(answer)) {
+            System.out.println("Test32 : PASS");
+        } else {
+            System.out.println("Test32 : X");
         }
     }
 }
