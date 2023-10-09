@@ -42,6 +42,7 @@ public class TestSet {
         main.test30(5500, new int[]{1, 0});
         main.test31("jaron", "noraj");
         main.test32("hello", 3, "hhheeellllllooo");
+        main.test33(1234, 10);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
