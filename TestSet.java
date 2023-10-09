@@ -373,4 +373,14 @@ public class TestSet {
             System.out.println("Test32 : X");
         }
     }
+    //Add every digit in integer.
+    private void test33(int n, int answer){
+        StringProblem addEveryDigit = new StringProblem();
+        int test = addEveryDigit.addEveryDigit(n);
+        if (test == answer) {
+            System.out.println("Test33 : PASS");
+        } else {
+            System.out.println("Test33 : X");
+        }
+    }
 }
