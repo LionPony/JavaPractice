@@ -46,6 +46,8 @@ public class TestSet {
         main.test34(new int[]{1, 2, 3, 4, 5}, 1, 3, new int[]{2, 3, 4});
         main.test35(new int[]{1, 2, 3, 4, 5}, 20);
         main.test36("abcdef", "f", "abcde");
+        main.test37(100, "baa");
+        System.out.println("TEST OVER");
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -406,7 +408,7 @@ public class TestSet {
             System.out.println("Test35 : X");
         }
     }
-    //Eliminate one char in String
+    //Remove one char in String
     private void test36(String my_string, String letter, String answer){
         EliminateLetter eliminateLetter = new EliminateLetter();
         String test = eliminateLetter.elimiateSpecificChar(my_string, letter);
@@ -414,6 +416,16 @@ public class TestSet {
             System.out.println("Test36 : PASS");
         } else {
             System.out.println("Test36 : X");
+        }
+    }
+    //Figure out age in alien language
+    private void test37(int age, String answer){
+        AlienAge alienAge = new AlienAge();
+        String test = alienAge.age(age);
+        if (test.equals(answer)) {
+            System.out.println("Test37 : PASS");
+        } else {
+            System.out.println("Test37 : X");
         }
     }
 }
