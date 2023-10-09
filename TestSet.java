@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 
 public class TestSet {
-    //Test
+    //TestSet
     public static void main(String[] args){
         TestSet main = new TestSet();
         main.test1(2, 3);
@@ -39,6 +39,7 @@ public class TestSet {
         main.test27(new String[]{"We", "are", "the", "world!"}, new int[] {2, 3, 3, 6});
         main.test28(20, 6);
         main.test29(150000, 142500);
+        main.test30(5500, new int[]{1, 0});
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -330,13 +331,23 @@ public class TestSet {
         }
     }
     //Check out price automatically
-    private void test29(int price , int result){
+    private void test29(int price , int answer){
         ClothingStore clothingStore = new ClothingStore();
         int test = clothingStore.discount(price);
-        if (test == result) {
+        if (test == answer) {
             System.out.println("Test29 : PASS");
         } else {
             System.out.println("Test29 : X");
+        }
+    }
+    //How many americano can he drink and checkout changes.
+    private void test30(int money , int[] answer){
+        IceAmericano iceAmericano = new IceAmericano();
+        int[] test = iceAmericano.howManyAmericano(money);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test30 : PASS");
+        } else {
+            System.out.println("Test30 : X");
         }
     }
 }
