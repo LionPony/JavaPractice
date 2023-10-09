@@ -15,7 +15,9 @@ public class StringProblem {
     public String nTimesString(String my_string, int n){
         StringBuilder result = new StringBuilder();
         for(int i = 0; i < my_string.length(); i++){
-            result.append(String.valueOf(my_string.charAt(i)).repeat(Math.max(0, n)));
+            for(int j = 0; j < n; j++){
+                result.append(my_string.charAt(i));
+            }
         }
         return result.toString();
     }
