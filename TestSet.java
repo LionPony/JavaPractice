@@ -43,6 +43,7 @@ public class TestSet {
         main.test31("jaron", "noraj");
         main.test32("hello", 3, "hhheeellllllooo");
         main.test33(1234, 10);
+        main.test34(new int[]{1, 2, 3, 4, 5}, 1, 3, new int[]{2, 3, 4});
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -381,6 +382,16 @@ public class TestSet {
             System.out.println("Test33 : PASS");
         } else {
             System.out.println("Test33 : X");
+        }
+    }
+    //Cut array index of num1 to num2.
+    private void test34(int[] numbers, int num1, int num2, int[] answer){
+       Array  cutArray = new Array();
+        int[] test = cutArray.cutArray(numbers, num1, num2);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test34 : PASS");
+        } else {
+            System.out.println("Test34 : X");
         }
     }
 }

@@ -118,4 +118,12 @@ public class Array {
         }
         return answer.getIntArray();
     }
+    //Cut array index of num1 to num2.
+    public int[] cutArray(int[] numbers, int num1, int num2) {
+        DynamicIntArray result = new DynamicIntArray();
+        for(int i = num1; i <= num2; i++){
+            result.append(numbers[i]);
+        }
+        return result.getIntArray();
+    }
 }
