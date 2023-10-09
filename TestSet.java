@@ -375,7 +375,7 @@ public class TestSet {
     }
     //Add every digit in integer.
     private void test33(int n, int answer){
-        StringProblem addEveryDigit = new StringProblem();
+        AddEveryDigit addEveryDigit = new AddEveryDigit();
         int test = addEveryDigit.addEveryDigit(n);
         if (test == answer) {
             System.out.println("Test33 : PASS");
