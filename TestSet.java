@@ -44,7 +44,7 @@ public class TestSet {
         main.test32("hello", 3, "hhheeellllllooo");
         main.test33(1234, 10);
         main.test34(new int[]{1, 2, 3, 4, 5}, 1, 3, new int[]{2, 3, 4});
-
+        main.test35(new int[]{1, 2, 3, 4, 5}, 20);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -393,6 +393,16 @@ public class TestSet {
             System.out.println("Test34 : PASS");
         } else {
             System.out.println("Test34 : X");
+        }
+    }
+    //Make product of two numbers max.
+    private void test35(int[] numbers, int answer){
+        MakeMax makeMax = new MakeMax();
+        int test = makeMax.maxProduct(numbers);
+        if (test == answer) {
+            System.out.println("Test35 : PASS");
+        } else {
+            System.out.println("Test35 : X");
         }
     }
 }
