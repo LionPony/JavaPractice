@@ -50,6 +50,7 @@ public class TestSet {
         main.test38(new int[]{3, 76, 24}, new int[]{3, 1, 2});
         main.test39(23, 5);
         main.test40(".... . .-.. .-.. ---", "hello");
+        main.test41("205", "052");
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -459,6 +460,16 @@ public class TestSet {
             System.out.println("Test40 : PASS");
         } else {
             System.out.println("Test40 : X");
+        }
+    }
+    //Rock(0) Scissors(2) Paper(5) array. Make win array of rsp.
+    private void test41(String rsp, String answer){
+        RockScissorsPaper rockScissorsPaper = new RockScissorsPaper();
+        String test = rockScissorsPaper.winCase(rsp);
+        if (answer.equals(test)) {
+            System.out.println("Test41 : PASS");
+        } else {
+            System.out.println("Test41 : X");
         }
     }
 }
