@@ -51,6 +51,7 @@ public class TestSet {
         main.test39(23, 5);
         main.test40(".... . .-.. .-.. ---", "hello");
         main.test41("205", "052");
+        main.test42(20, 17, 1140);
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -470,6 +471,16 @@ public class TestSet {
             System.out.println("Test41 : PASS");
         } else {
             System.out.println("Test41 : X");
+        }
+    }
+    //Combination test.
+    private void test42(int balls, int share, int answer){
+        Combination combination = new Combination();
+        int test = combination.combinationRelation(balls, share);
+        if (test == answer) {
+            System.out.println("Test42 : PASS");
+        } else {
+            System.out.println("Test42 : X");
         }
     }
 }
