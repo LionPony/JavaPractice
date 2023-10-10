@@ -49,7 +49,7 @@ public class TestSet {
         main.test37(100, "baa");
         main.test38(new int[]{3, 76, 24}, new int[]{3, 1, 2});
         main.test39(23, 5);
-        System.out.println("TEST OVER");
+        main.test40(".... . .-.. .-.. ---", "hello");
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -449,6 +449,16 @@ public class TestSet {
             System.out.println("Test39 : PASS");
         } else {
             System.out.println("Test39 : X");
+        }
+    }
+    //Translate Morse code to English
+    private void test40(String letter, String answer){
+        MorseCode morseCode = new MorseCode();
+        String test = morseCode.translate(letter);
+        if (answer.equals(test)) {
+            System.out.println("Test40 : PASS");
+        } else {
+            System.out.println("Test40 : X");
         }
     }
 }
