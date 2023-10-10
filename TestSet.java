@@ -47,8 +47,10 @@ public class TestSet {
         main.test35(new int[]{1, 2, 3, 4, 5}, 20);
         main.test36("abcdef", "f", "abcde");
         main.test37(100, "baa");
+        main.test38(new int[]{3, 76, 24}, new int[]{3, 1, 2});
         System.out.println("TEST OVER");
     }
+
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
         Divide div = new Divide();
@@ -426,6 +428,16 @@ public class TestSet {
             System.out.println("Test37 : PASS");
         } else {
             System.out.println("Test37 : X");
+        }
+    }
+    //Create order of emergency
+    private void test38(int[] emergency, int[] answer){
+        TreatmentOrder treatmentOrder = new TreatmentOrder();
+        int[] test = treatmentOrder.rank(emergency);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test38 : PASS");
+        } else {
+            System.out.println("Test38 : X");
         }
     }
 }
