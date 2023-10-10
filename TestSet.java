@@ -48,6 +48,7 @@ public class TestSet {
         main.test36("abcdef", "f", "abcde");
         main.test37(100, "baa");
         main.test38(new int[]{3, 76, 24}, new int[]{3, 1, 2});
+        main.test39(23, 5);
         System.out.println("TEST OVER");
     }
 
@@ -438,6 +439,16 @@ public class TestSet {
             System.out.println("Test38 : PASS");
         } else {
             System.out.println("Test38 : X");
+        }
+    }
+    //Find out how many ants adjust to kill hp.
+    private void test39(int hp, int answer){
+        AntCorp antCorp = new AntCorp();
+        int test = antCorp.howMany(hp);
+        if (test == answer) {
+            System.out.println("Test39 : PASS");
+        } else {
+            System.out.println("Test39 : X");
         }
     }
 }
