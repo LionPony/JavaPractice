@@ -1,6 +1,5 @@
+//https://school.programmers.co.kr/learn/courses/30/lessons/120839
 package ProblemsLv0;
-
-import java.util.Comparator;
 
 public class RockScissorsPaper implements Comparable<RockScissorsPaper>{
     char element;
@@ -25,13 +24,13 @@ public class RockScissorsPaper implements Comparable<RockScissorsPaper>{
         for(int i = 0; i < rsp.length(); i++){
             newOne = new RockScissorsPaper(rsp.charAt(i));
             for(RockScissorsPaper comparison : allCase){
+                //Only add when win.
                 if(comparison.compareTo(newOne) == 1){
                     result += comparison.getElement();
                     break;
                 }
             }
         }
-
         return result;
     }
     public int compareTo(RockScissorsPaper rsp_1){
