@@ -55,6 +55,7 @@ public class TestSet {
         main.test43(new int[]{1, 2, 3, 4, 5, 6, 7, 8}, 2, new int[][]{{1, 2}, {3, 4}, {5, 6}, {7, 8}});
         main.test44(7, 3);
         main.test45(new int[]{1, 2, 3, 4}, 2, 3);
+        main.test46(new String[]{"ayaye", "uuuma", "ye", "yemawoo", "ayaa"}, 3);
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -514,6 +515,16 @@ public class TestSet {
             System.out.println("Test45 : PASS");
         } else {
             System.out.println("Test45 : X");
+        }
+    }
+    //Count baby can babbling
+    private void test46(String[] babbling, int answer){
+        Babbling countBabbling = new Babbling();
+        int test = countBabbling.count(babbling);
+        if (test == answer) {
+            System.out.println("Test46 : PASS");
+        } else {
+            System.out.println("Test46 : X");
         }
     }
 }
