@@ -52,6 +52,7 @@ public class TestSet {
         main.test40(".... . .-.. .-.. ---", "hello");
         main.test41("205", "052");
         main.test42(20, 17, 1140);
+        main.test43(new int[]{1, 2, 3, 4, 5, 6, 7, 8}, 2, new int[][]{{1, 2}, {3, 4}, {5, 6}, {7, 8}});
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -481,6 +482,16 @@ public class TestSet {
             System.out.println("Test42 : PASS");
         } else {
             System.out.println("Test42 : X");
+        }
+    }
+    //Make numlist to 2d array.
+    private void test43(int[] numlist, int n, int[][] answer){
+        Array array = new Array();
+        int[][] test = array.make2d(numlist, n);
+        if (Arrays.deepEquals(test, answer)) {
+            System.out.println("Test43 : PASS");
+        } else {
+            System.out.println("Test43 : X");
         }
     }
 }

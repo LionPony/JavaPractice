@@ -126,4 +126,16 @@ public class Array {
         }
         return result.getIntArray();
     }
+    //Make numlist to 2d array.
+    public int[][] make2d(int[] num_list, int n){
+        int[][] result = new int[num_list.length/n][n];
+        int count = 0;
+        for(int i = 0; i < num_list.length; i += n){
+            for(int j = 0; j < n; j++){
+                result[count][j] = num_list[i+j];
+            }
+            count++;
+        }
+        return result;
+    }
 }
