@@ -58,6 +58,7 @@ public class TestSet {
         main.test45(new int[]{1, 2, 3, 4}, 2, 3);
         main.test46(new String[]{"ayaye", "uuuma", "ye", "yemawoo", "ayaa"}, 3);
         main.test47(new int[]{4, 455, 6, 4, -1, 45, 6}, "left", new int[]{455, 6, 4, -1, 45, 6, 4});
+        main.test48(10, 5);
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -537,6 +538,16 @@ public class TestSet {
             System.out.println("Test47 : PASS");
         } else {
             System.out.println("Test47 : X");
+        }
+    }
+    //Find composite number under n
+    private void test48(int n, int answer){
+        CompositeNumber compositeNumber = new CompositeNumber();
+        int test = compositeNumber.count(n);
+        if (test == answer) {
+            System.out.println("Test48 : PASS");
+        } else {
+            System.out.println("Test48 : X");
         }
     }
 }
