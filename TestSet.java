@@ -53,6 +53,8 @@ public class TestSet {
         main.test41("205", "052");
         main.test42(20, 17, 1140);
         main.test43(new int[]{1, 2, 3, 4, 5, 6, 7, 8}, 2, new int[][]{{1, 2}, {3, 4}, {5, 6}, {7, 8}});
+        main.test44(7, 3);
+        main.test45(new int[]{1, 2, 3, 4}, 2, 3);
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -492,6 +494,26 @@ public class TestSet {
             System.out.println("Test43 : PASS");
         } else {
             System.out.println("Test43 : X");
+        }
+    }
+    //Find num which max num! before given n.
+    private void test44(int n, int answer){
+        Factorial factorial = new Factorial();
+        int test = factorial.maxfactorial(n);
+        if (test == answer) {
+            System.out.println("Test44 : PASS");
+        } else {
+            System.out.println("Test44 : X");
+        }
+    }
+    //Find who throws last ball.
+    private void test45(int[] numbers, int k, int answer){
+        ThrowBall throwball = new ThrowBall();
+        int test = throwball.hopping(numbers, k);
+        if (test == answer) {
+            System.out.println("Test45 : PASS");
+        } else {
+            System.out.println("Test45 : X");
         }
     }
 }
