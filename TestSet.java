@@ -1,5 +1,6 @@
 //Set of Tests("Coding test Start Lecture" from school.programmers.co.kr)
 import DataStructure.Array;
+import DataStructure.IntList;
 import Operator.*;
 import ProblemsLv0.*;
 import Operator.Boolean;
@@ -56,6 +57,7 @@ public class TestSet {
         main.test44(7, 3);
         main.test45(new int[]{1, 2, 3, 4}, 2, 3);
         main.test46(new String[]{"ayaye", "uuuma", "ye", "yemawoo", "ayaa"}, 3);
+        main.test47(new int[]{4, 455, 6, 4, -1, 45, 6}, "left", new int[]{455, 6, 4, -1, 45, 6, 4});
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -525,6 +527,16 @@ public class TestSet {
             System.out.println("Test46 : PASS");
         } else {
             System.out.println("Test46 : X");
+        }
+    }
+    //Rotate array given direction.
+    private void test47(int[] numbers, String direction, int[] answer){
+        RotateArray rotateArray = new RotateArray();
+        int[] test = rotateArray.rotate(numbers, direction);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test47 : PASS");
+        } else {
+            System.out.println("Test47 : X");
         }
     }
 }
