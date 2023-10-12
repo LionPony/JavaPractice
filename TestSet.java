@@ -64,6 +64,7 @@ public class TestSet {
         main.test51(new String[]{"a", "b", "c"}, new String[]{"com", "b", "d", "p", "c"}, 2);
         main.test52(new int[]{199, 72, 222}, 1);
         main.test53(144, 1);
+        main.test54("aAb1B2cC34oOp", 10);
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -603,6 +604,16 @@ public class TestSet {
             System.out.println("Test53 : PASS");
         } else {
             System.out.println("Test53 : X");
+        }
+    }
+    //Detect Integer and sum.
+    private void test54(String my_string, int answer){
+        DetectInteger detectInteger = new DetectInteger();
+        int test = detectInteger.detectSum(my_string);
+        if (test == answer) {
+            System.out.println("Test54 : PASS");
+        } else {
+            System.out.println("Test54 : X");
         }
     }
 }
