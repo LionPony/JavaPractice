@@ -68,6 +68,7 @@ public class TestSet {
         main.test56(12, new int[]{2, 3});
         main.test57("hi12392", new int[]{1, 2, 2, 3, 9});
         main.test58("1 2 Z 3", 4);
+        main.test59("people", "peol");
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -657,6 +658,16 @@ public class TestSet {
             System.out.println("Test58 : PASS");
         } else {
             System.out.println("Test58 : X");
+        }
+    }
+    //If char already seen one. Remove it.
+    private void test59(String my_string, String answer){
+        RemoveDuplicate removeDuplicate = new RemoveDuplicate();
+        String test = removeDuplicate.removeDuplicate(my_string);
+        if (answer.equals(test)) {
+            System.out.println("Test59 : PASS");
+        } else {
+            System.out.println("Test59 : X");
         }
     }
 }
