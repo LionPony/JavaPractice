@@ -72,6 +72,7 @@ public class TestSet {
         main.test60(3, new int[]{4, 5, 6, 7, 8, 9, 10, 11, 12}, new int[]{6, 9, 12});
         main.test61("cccCCC", "CCCccc");
         main.test62("dfjardstddetckdaccccdegk", 4, "attack");
+        main.test63(new int[]{1, 2, -3, 4, -5}, 15);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -700,6 +701,16 @@ public class TestSet {
             System.out.println("Test62 : PASS");
         } else {
             System.out.println("Test62 : X");
+        }
+    }
+    //MakeMax(2)
+    private void test63(int[] numbers, int answer){
+        MakeMax makeMax = new MakeMax();
+        int test = makeMax.maxProduct(numbers);
+        if (test == answer) {
+            System.out.println("Test63 : PASS");
+        } else {
+            System.out.println("Test63 : X");
         }
     }
 }
