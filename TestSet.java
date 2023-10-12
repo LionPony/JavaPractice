@@ -62,6 +62,7 @@ public class TestSet {
         main.test49("ab6CDE443fgh22iJKlmn1o", "6CD", 1);
         main.test50("nice to meet you", "nc t mt y");
         main.test51(new String[]{"a", "b", "c"}, new String[]{"com", "b", "d", "p", "c"}, 2);
+        main.test52(new int[]{199, 72, 222}, 1);
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -581,6 +582,16 @@ public class TestSet {
             System.out.println("Test51 : PASS");
         } else {
             System.out.println("Test51 : X");
+        }
+    }
+    //Check complete condition of triangle.
+    private void test52(int[] sides, int answer){
+        TriangleComplete triangleComplete = new TriangleComplete();
+        int test = triangleComplete.complete(sides);
+        if (test == answer) {
+            System.out.println("Test52 : PASS");
+        } else {
+            System.out.println("Test52 : X");
         }
     }
 }
