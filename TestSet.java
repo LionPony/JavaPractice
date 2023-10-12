@@ -71,6 +71,7 @@ public class TestSet {
         main.test59("people", "peol");
         main.test60(3, new int[]{4, 5, 6, 7, 8, 9, 10, 11, 12}, new int[]{6, 9, 12});
         main.test61("cccCCC", "CCCccc");
+        main.test62("dfjardstddetckdaccccdegk", 4, "attack");
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -689,6 +690,16 @@ public class TestSet {
             System.out.println("Test61 : PASS");
         } else {
             System.out.println("Test61 : X");
+        }
+    }
+    //Decode Cipher
+    private void test62(String cipher, int code, String answer){
+        DecodeCipher decodeCipher = new DecodeCipher();
+        String test = decodeCipher.decode(cipher, code);
+        if (test.equals(answer)) {
+            System.out.println("Test62 : PASS");
+        } else {
+            System.out.println("Test62 : X");
         }
     }
 }
