@@ -6,5 +6,6 @@ public class Letter {
     //Figure out how much length you need to write message.
     public int length(String message){
         return message.length() * space;
+
     }
 }
