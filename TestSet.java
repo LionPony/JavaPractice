@@ -68,8 +68,10 @@ public class TestSet {
         main.test56(12, new int[]{2, 3});
         main.test57("hi12392", new int[]{1, 2, 2, 3, 9});
         main.test58("1 2 Z 3", 4);
+        main.test59("people", "peol");
+        main.test60(3, new int[]{4, 5, 6, 7, 8, 9, 10, 11, 12}, new int[]{6, 9, 12});
+        main.test61("cccCCC", "CCCccc");
     }
-
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
         Divide div = new Divide();
@@ -657,6 +659,36 @@ public class TestSet {
             System.out.println("Test58 : PASS");
         } else {
             System.out.println("Test58 : X");
+        }
+    }
+    //If char already seen one. Remove it.
+    private void test59(String my_string, String answer){
+        RemoveDuplicate removeDuplicate = new RemoveDuplicate();
+        String test = removeDuplicate.removeDuplicate(my_string);
+        if (answer.equals(test)) {
+            System.out.println("Test59 : PASS");
+        } else {
+            System.out.println("Test59 : X");
+        }
+    }
+    //Select n`s multiples in array. Remove others.
+    private void test60(int n, int[] numlist, int[] answer){
+        FindMultiples findMultiples = new FindMultiples();
+        int[] test = findMultiples.makeMultipleArray(n, numlist);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test60 : PASS");
+        } else {
+            System.out.println("Test60 : X");
+        }
+    }
+    //Upper case to lower case, vice versa.
+    private void test61(String my_string, String answer){
+        UpperLower upperLower = new UpperLower();
+        String test = upperLower.upperLower(my_string);
+        if (test.equals(answer)) {
+            System.out.println("Test61 : PASS");
+        } else {
+            System.out.println("Test61 : X");
         }
     }
 }
