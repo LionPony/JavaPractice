@@ -59,6 +59,7 @@ public class TestSet {
         main.test46(new String[]{"ayaye", "uuuma", "ye", "yemawoo", "ayaa"}, 3);
         main.test47(new int[]{4, 455, 6, 4, -1, 45, 6}, "left", new int[]{455, 6, 4, -1, 45, 6, 4});
         main.test48(10, 5);
+        main.test49("ab6CDE443fgh22iJKlmn1o", "6CD", 1);
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -548,6 +549,16 @@ public class TestSet {
             System.out.println("Test48 : PASS");
         } else {
             System.out.println("Test48 : X");
+        }
+    }
+    //Find str1 contains str2.
+    private void test49(String str1, String str2, int answer){
+        Stringinstring stringinstring= new Stringinstring();
+        int test = stringinstring.contains(str1, str2);
+        if (test == answer) {
+            System.out.println("Test49 : PASS");
+        } else {
+            System.out.println("Test49 : X");
         }
     }
 }
