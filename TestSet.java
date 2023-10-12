@@ -65,7 +65,8 @@ public class TestSet {
         main.test52(new int[]{199, 72, 222}, 1);
         main.test53(144, 1);
         main.test54("aAb1B2cC34oOp", 10);
-        main.test55(2, 10, 2048);
+        main.test55(2, 10, 1024);
+        main.test56(12, new int[]{2, 3});
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -625,6 +626,15 @@ public class TestSet {
             System.out.println("Test55 : PASS");
         } else {
             System.out.println("Test55 : X");
+        }
+    }
+    private void test56(int n, int[] answer){
+        Factorization factorization = new Factorization();
+        int[] test = factorization.factorization(252);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test56 : PASS");
+        } else {
+            System.out.println("Test56 : X");
         }
     }
 }
