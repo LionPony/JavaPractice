@@ -61,6 +61,7 @@ public class TestSet {
         main.test48(10, 5);
         main.test49("ab6CDE443fgh22iJKlmn1o", "6CD", 1);
         main.test50("nice to meet you", "nc t mt y");
+        main.test51(new String[]{"a", "b", "c"}, new String[]{"com", "b", "d", "p", "c"}, 2);
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -570,6 +571,16 @@ public class TestSet {
             System.out.println("Test50 : PASS");
         } else {
             System.out.println("Test50 : X");
+        }
+    }
+    //Check similarity between two arrays.
+    private void test51(String[] s1, String[] s2, int answer){
+        ArraySimilarity arraySimilarity = new ArraySimilarity();
+        int test = arraySimilarity.similarity(s1, s2);
+        if (test == answer) {
+            System.out.println("Test51 : PASS");
+        } else {
+            System.out.println("Test51 : X");
         }
     }
 }
