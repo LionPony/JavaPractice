@@ -60,6 +60,7 @@ public class TestSet {
         main.test47(new int[]{4, 455, 6, 4, -1, 45, 6}, "left", new int[]{455, 6, 4, -1, 45, 6, 4});
         main.test48(10, 5);
         main.test49("ab6CDE443fgh22iJKlmn1o", "6CD", 1);
+        main.test50("nice to meet you", "nc t mt y");
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -559,6 +560,16 @@ public class TestSet {
             System.out.println("Test49 : PASS");
         } else {
             System.out.println("Test49 : X");
+        }
+    }
+    //Remove vowel from given string
+    private void test50(String my_string, String answer){
+        RemoveBowel removeBowel = new RemoveBowel();
+        String test = removeBowel.remove(my_string);
+        if (answer.equals(test)) {
+            System.out.println("Test50 : PASS");
+        } else {
+            System.out.println("Test50 : X");
         }
     }
 }
