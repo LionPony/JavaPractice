@@ -65,6 +65,7 @@ public class TestSet {
         main.test52(new int[]{199, 72, 222}, 1);
         main.test53(144, 1);
         main.test54("aAb1B2cC34oOp", 10);
+        main.test55(2, 10, 2048);
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -614,6 +615,16 @@ public class TestSet {
             System.out.println("Test54 : PASS");
         } else {
             System.out.println("Test54 : X");
+        }
+    }
+    // Tth power of n
+    private void test55(int n, int t, int answer){
+        Power power = new Power();
+        int test = power.power(n, t);
+        if (test == answer) {
+            System.out.println("Test55 : PASS");
+        } else {
+            System.out.println("Test55 : X");
         }
     }
 }
