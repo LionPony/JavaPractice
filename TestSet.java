@@ -1,6 +1,5 @@
 //Set of Tests("Coding test Start Lecture" from school.programmers.co.kr)
 import DataStructure.Array;
-import DataStructure.IntList;
 import Operator.*;
 import ProblemsLv0.*;
 import Operator.Boolean;
@@ -67,6 +66,7 @@ public class TestSet {
         main.test54("aAb1B2cC34oOp", 10);
         main.test55(2, 10, 1024);
         main.test56(12, new int[]{2, 3});
+        main.test57("hi12392", new int[]{1, 2, 2, 3, 9});
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -628,13 +628,24 @@ public class TestSet {
             System.out.println("Test55 : X");
         }
     }
+    //Factorization given n.
     private void test56(int n, int[] answer){
         Factorization factorization = new Factorization();
-        int[] test = factorization.factorization(252);
+        int[] test = factorization.factorization(n);
         if (Arrays.equals(test, answer)) {
             System.out.println("Test56 : PASS");
         } else {
             System.out.println("Test56 : X");
+        }
+    }
+    //Detect Integer and return int array of it.
+    private void test57(String my_string, int[] answer){
+        DetectInteger detectInteger = new DetectInteger();
+        int[] test = detectInteger.detectArray(my_string);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test57 : PASS");
+        } else {
+            System.out.println("Test57 : X");
         }
     }
 }
