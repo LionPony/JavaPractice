@@ -67,6 +67,7 @@ public class TestSet {
         main.test55(2, 10, 1024);
         main.test56(12, new int[]{2, 3});
         main.test57("hi12392", new int[]{1, 2, 2, 3, 9});
+        main.test58("1 2 Z 3", 4);
     }
 
     //Operator.Divide test(num1/num2). It returns share.
@@ -646,6 +647,16 @@ public class TestSet {
             System.out.println("Test57 : PASS");
         } else {
             System.out.println("Test57 : X");
+        }
+    }
+    //If word is num add. If word is "Z" sub last one.
+    private void test58(String s, int answer){
+        CtrlZ ctrlZ = new CtrlZ();
+        int test = ctrlZ.readLine(s);
+        if (test == answer) {
+            System.out.println("Test58 : PASS");
+        } else {
+            System.out.println("Test58 : X");
         }
     }
 }
