@@ -73,6 +73,7 @@ public class TestSet {
         main.test61("cccCCC", "CCCccc");
         main.test62("dfjardstddetckdaccccdegk", 4, "attack");
         main.test63(new int[]{1, 2, -3, 4, -5}, 15);
+        main.test64(new int[]{3, 10, 28}, 20, 28);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -711,6 +712,16 @@ public class TestSet {
             System.out.println("Test63 : PASS");
         } else {
             System.out.println("Test63 : X");
+        }
+    }
+    4
+    private void test64(int[] numbers, int n, int answer){
+        ClosestNum closeNum = new ClosestNum();
+        int test = closeNum.findClosest(numbers, n);
+        if (test == answer) {
+            System.out.println("Test64 : PASS");
+        } else {
+            System.out.println("Test64 : X");
         }
     }
 }
