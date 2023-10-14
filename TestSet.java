@@ -714,7 +714,6 @@ public class TestSet {
             System.out.println("Test63 : X");
         }
     }
-    4
     private void test64(int[] numbers, int n, int answer){
         ClosestNum closeNum = new ClosestNum();
         int test = closeNum.findClosest(numbers, n);
