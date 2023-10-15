@@ -75,6 +75,8 @@ public class TestSet {
         main.test63(new int[]{1, 2, -3, 4, -5}, 15);
         main.test64(new int[]{3, 10, 28}, 20, 28);
         main.test65(29423, 2);
+        main.test66("onetwothreefourfivesixseveneightnine", 123456789);
+        main.test67("hello", 1, 2, "hlelo");
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -733,6 +735,26 @@ public class TestSet {
             System.out.println("Test65 : PASS");
         } else {
             System.out.println("Test65 : X");
+        }
+    }
+    //Written in English to numbers.
+    private void test66(String numbers, long answer){
+        HateEnglish hateEnglish = new HateEnglish();
+        long test = hateEnglish.expressNumbers(numbers);
+        if (test == answer) {
+            System.out.println("Test66 : PASS");
+        } else {
+            System.out.println("Test66 : X");
+        }
+    }
+    //Switch char at index.
+    private void test67(String my_string, int num1, int num2, String answer){
+        SwitchIndex switchIndex = new SwitchIndex();
+        String test = switchIndex.switchIndex(my_string, num1, num2);
+        if (test.equals(answer)) {
+            System.out.println("Test67 : PASS");
+        } else {
+            System.out.println("Test67 : X");
         }
     }
 }
