@@ -74,6 +74,7 @@ public class TestSet {
         main.test62("dfjardstddetckdaccccdegk", 4, "attack");
         main.test63(new int[]{1, 2, -3, 4, -5}, 15);
         main.test64(new int[]{3, 10, 28}, 20, 28);
+        main.test65(29423, 2);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -714,6 +715,7 @@ public class TestSet {
             System.out.println("Test63 : X");
         }
     }
+    //Find the closest num in array.
     private void test64(int[] numbers, int n, int answer){
         ClosestNum closeNum = new ClosestNum();
         int test = closeNum.findClosest(numbers, n);
@@ -721,6 +723,16 @@ public class TestSet {
             System.out.println("Test64 : PASS");
         } else {
             System.out.println("Test64 : X");
+        }
+    }
+    //Count how many 3, 6, 9 in given number.
+    private void test65(int order, int answer){
+        ThreeSixNine threeSixNine = new ThreeSixNine();
+        int test = threeSixNine.countClap(order);
+        if (test == answer) {
+            System.out.println("Test65 : PASS");
+        } else {
+            System.out.println("Test65 : X");
         }
     }
 }
