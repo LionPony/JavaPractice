@@ -79,6 +79,7 @@ public class TestSet {
         main.test67("hello", 1, 2, "hlelo");
         main.test68("abcabcadc", "d");
         main.test69(24, new int[]{1, 2, 3, 4, 6, 8, 12, 24});
+        main.test70(new int[]{1, 8, 3}, new int[]{8, 1});
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -777,6 +778,16 @@ public class TestSet {
             System.out.println("Test69 : PASS");
         } else {
             System.out.println("Test69 : X");
+        }
+    }
+    //Find biggest one and return with index of it.
+    private void test70(int[] array, int[] answer){
+        FindBiggest findBiggest = new FindBiggest();
+        int[] test = findBiggest.findBiggest(array);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test70 : PASS");
+        } else {
+            System.out.println("Test70 : X");
         }
     }
 }
