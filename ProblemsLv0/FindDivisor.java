@@ -41,7 +41,7 @@ public class FindDivisor {
 
         //Process to make int[].
         int[] resultArray = new int[result.size()];
-        for(int i = 0; i < result.size(); i++){
+        for(int i = 0; i < result.size(); i++) {
             resultArray[i] = result.get(i);
         }
         return resultArray;
