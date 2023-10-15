@@ -78,6 +78,7 @@ public class TestSet {
         main.test66("onetwothreefourfivesixseveneightnine", 123456789);
         main.test67("hello", 1, 2, "hlelo");
         main.test68("abcabcadc", "d");
+        main.test69(24, new int[]{1, 2, 3, 4, 6, 8, 12, 24});
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -766,6 +767,16 @@ public class TestSet {
             System.out.println("Test68 : PASS");
         } else {
             System.out.println("Test68 : X");
+        }
+    }
+    //Find all divisor.
+    private void test69(int n, int[] answer){
+        FindDivisor findDivisor = new FindDivisor();
+        int[] test = findDivisor.findDivisor(n);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test69 : PASS");
+        } else {
+            System.out.println("Test69 : X");
         }
     }
 }
