@@ -77,6 +77,7 @@ public class TestSet {
         main.test65(29423, 2);
         main.test66("onetwothreefourfivesixseveneightnine", 123456789);
         main.test67("hello", 1, 2, "hlelo");
+        main.test68("abcabcadc", "d");
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -755,6 +756,16 @@ public class TestSet {
             System.out.println("Test67 : PASS");
         } else {
             System.out.println("Test67 : X");
+        }
+    }
+    //Leave only once appeared.
+    private void test68(String s, String answer){
+        AppearOnlyOnce appearOnlyOnce = new AppearOnlyOnce();
+        String test = appearOnlyOnce.appearOnlyOnce(s);
+        if (test.equals(answer)) {
+            System.out.println("Test68 : PASS");
+        } else {
+            System.out.println("Test68 : X");
         }
     }
 }
