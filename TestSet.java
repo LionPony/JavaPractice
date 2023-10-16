@@ -87,6 +87,7 @@ public class TestSet {
         main.test75("olleh", "hello", 1);
         main.test76(1, 13, 1, 6);
         main.test77("a1aa23a", 24);
+        main.test78("1", "10", "11");
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -865,6 +866,16 @@ public class TestSet {
             System.out.println("Test77 : PASS");
         } else {
             System.out.println("Test77 : X");
+        }
+    }
+    //Add binary Strings.
+    private void test78(String bin1, String bin2, String answer){
+        BinaryAdd binaryAdd = new BinaryAdd();
+        String test = binaryAdd.add(bin1, bin2);
+        if (test.equals(answer)) {
+            System.out.println("Test78 : PASS");
+        } else {
+            System.out.println("Test78 : X");
         }
     }
 }
