@@ -85,6 +85,7 @@ public class TestSet {
         main.test73("3 + 4 + 3", 10);
         main.test74(new String[]{"3 - 4 = -3", "5 + 6 = 11"}, new String[]{"X", "O"});
         main.test75("olleh", "hello", 1);
+        main.test76(1, 13, 1, 6);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -785,7 +786,7 @@ public class TestSet {
             System.out.println("Test69 : X");
         }
     }
-    //Find biggest one and return with index of it.
+    //Find the biggest one and return with index of it.
     private void test70(int[] array, int[] answer){
         FindBiggest findBiggest = new FindBiggest();
         int[] test = findBiggest.findBiggest(array);
@@ -843,6 +844,16 @@ public class TestSet {
             System.out.println("Test75 : PASS");
         } else {
             System.out.println("Test75 : X");
+        }
+    }
+    //How many letter k appers in i~j.
+    private void test76(int i, int j, int k, int answer){
+        CountKEach countKEach = new CountKEach();
+        int test = countKEach.countKEach(i, j, k);
+        if (test == answer) {
+            System.out.println("Test76 : PASS");
+        } else {
+            System.out.println("Test76 : X");
         }
     }
 }
