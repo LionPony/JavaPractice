@@ -82,6 +82,7 @@ public class TestSet {
         main.test70(new int[]{1, 8, 3}, new int[]{8, 1});
         main.test71(29183, 1, 3);
         main.test72("Bcad", "abcd");
+        main.test73("3 + 4 + 3", 10);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -810,6 +811,16 @@ public class TestSet {
             System.out.println("Test72 : PASS");
         } else {
             System.out.println("Test72 : X");
+        }
+    }
+    //Calculate String operation.
+    private void test73(String my_string, int answer){
+        CalculateString calculateString = new CalculateString();
+        int test = calculateString.calculateString(my_string);
+        if (test == answer) {
+            System.out.println("Test73 : PASS");
+        } else {
+            System.out.println("Test73 : X");
         }
     }
 }
