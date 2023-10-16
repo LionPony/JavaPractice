@@ -83,6 +83,8 @@ public class TestSet {
         main.test71(29183, 1, 3);
         main.test72("Bcad", "abcd");
         main.test73("3 + 4 + 3", 10);
+        main.test74(new String[]{"3 - 4 = -3", "5 + 6 = 11"}, new String[]{"X", "O"});
+        main.test75("olleh", "hello", 1);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -821,6 +823,26 @@ public class TestSet {
             System.out.println("Test73 : PASS");
         } else {
             System.out.println("Test73 : X");
+        }
+    }
+    //Make array of operations true or false.
+    private void test74(String[] quiz, String[] answer){
+        OXQuiz oxQuiz = new OXQuiz();
+        String[] test = oxQuiz.oxQuiz(quiz);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test74 : PASS");
+        } else {
+            System.out.println("Test74 : X");
+        }
+    }
+    //Make array of operations true or false.
+    private void test75(String[] quiz, String[] answer){
+        OXQuiz oxQuiz = new OXQuiz();
+        String[] test = oxQuiz.oxQuiz(quiz);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test74 : PASS");
+        } else {
+            System.out.println("Test74 : X");
         }
     }
 }
