@@ -80,6 +80,7 @@ public class TestSet {
         main.test68("abcabcadc", "d");
         main.test69(24, new int[]{1, 2, 3, 4, 6, 8, 12, 24});
         main.test70(new int[]{1, 8, 3}, new int[]{8, 1});
+        main.test71(29183, 1, 3);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -788,6 +789,16 @@ public class TestSet {
             System.out.println("Test70 : PASS");
         } else {
             System.out.println("Test70 : X");
+        }
+    }
+    //Find index of given.
+    private void test71(int num, int k, int answer){
+        FindNumber findnumber = new FindNumber();
+        int test = findnumber.findNumber(num, k);
+        if (test == answer) {
+            System.out.println("Test71 : PASS");
+        } else {
+            System.out.println("Test71 : X");
         }
     }
 }
