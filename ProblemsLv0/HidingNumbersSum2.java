@@ -5,21 +5,24 @@ public class HidingNumbersSum2 {
     //Sum every numbers in String.
     public int sum(String my_string){
         int sum = 0;
-        StringBuilder word = new StringBuilder();
+        StringBuilder number = new StringBuilder();
         String[] line = my_string.split("");
+
         for(String i : line){
+            //If meet alphabet add number to sum.
             if(!isInteger(i)){
-                if(word.length() != 0){
-                    sum += Integer.parseInt(word.toString());
-                    word = new StringBuilder();
+                if(!number.isEmpty()){
+                    sum += Integer.parseInt(number.toString());
+                    number = new StringBuilder();
                 }
             }
             else{
-                word.append(i);
+                number.append(i);
             }
         }
-        if(!word.isEmpty()){
-            sum += Integer.parseInt(word.toString());
+        //Check number is empty.
+        if(!number.isEmpty()){
+            sum += Integer.parseInt(number.toString());
         }
         return sum;
     }
