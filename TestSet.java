@@ -835,14 +835,14 @@ public class TestSet {
             System.out.println("Test74 : X");
         }
     }
-    //Make array of operations true or false.
-    private void test75(String[] quiz, String[] answer){
-        OXQuiz oxQuiz = new OXQuiz();
-        String[] test = oxQuiz.oxQuiz(quiz);
-        if (Arrays.equals(test, answer)) {
-            System.out.println("Test74 : PASS");
+    //Check out before can be after.
+    private void test75(String before, String after, int answer){
+        MakeAfromB makeAfromB = new MakeAfromB();
+        int test = makeAfromB.makeAfromB(before, after);
+        if (test == answer) {
+            System.out.println("Test75 : PASS");
         } else {
-            System.out.println("Test74 : X");
+            System.out.println("Test75 : X");
         }
     }
 }
