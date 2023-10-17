@@ -89,6 +89,7 @@ public class TestSet {
         main.test77("a1aa23a", 24);
         main.test78("1", "10", "11");
         main.test79(new int[]{7, 77, 17}, 4);
+        main.test80("abc1Addfggg4556b", 6, new String[] {"abc1Ad", "dfggg4", "556b"});
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -887,6 +888,16 @@ public class TestSet {
             System.out.println("Test79 : PASS");
         } else {
             System.out.println("Test79 : X");
+        }
+    }
+    //Substring and save it in array.
+    private void test80(String my_str, int n, String[] answer){
+        SubstringSaveArray substringSaveArray = new SubstringSaveArray();
+        String[] test = substringSaveArray.substringSaveArray(my_str, n);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test80 : PASS");
+        } else {
+            System.out.println("Test80 : X");
         }
     }
 }
