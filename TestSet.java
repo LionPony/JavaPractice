@@ -90,6 +90,7 @@ public class TestSet {
         main.test78("1", "10", "11");
         main.test79(new int[]{7, 77, 17}, 4);
         main.test80("abc1Addfggg4556b", 6, new String[] {"abc1Ad", "dfggg4", "556b"});
+        main.test81(new int[][]{{1, 1}, {2, 1}, {2, 2}, {1, 2}}, 1);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -898,6 +899,16 @@ public class TestSet {
             System.out.println("Test80 : PASS");
         } else {
             System.out.println("Test80 : X");
+        }
+    }
+    //Figure out Rectangle area.
+    private void test81(int[][] dots, int answer){
+        RectangleArea rectangleArea = new RectangleArea();
+        int test = rectangleArea.rectangleArea(dots);
+        if (test == answer) {
+            System.out.println("Test81 : PASS");
+        } else {
+            System.out.println("Test81 : X");
         }
     }
 }
