@@ -3,32 +3,42 @@ package ProblemsLv0;
 
 public class CoordinateOfCharacter {
     int[][] gameBoard;
+
+    //Where (0, 0) position in 2D array.
     int[] standard;
+
     //Find out where is character.
     public int[] coordinateOfCharacter(String[] keyinput, int[] board){
-        gameBoard = makeBoard(board);
+        makeBoard(board);
         int width = gameBoard.length;
         int height = gameBoard[0].length;
+
+        //Cursor which works in 2d array.
         standard = new int[]{width/2, height/2};
-        int[] pointer = new int[]{0, 0};
+
+        //Fixed start position of Character.
+        int[] position = new int[]{0, 0};
 
         for(String i : keyinput){
-            pointer = takeOrder(i, pointer);
+            position = takeOrder(i, position);
         }
-        return pointer;
+        return position;
     }
-    public int[] translate(int[] pointer){
+    public int[] translate(int[] position){
+        //Cursor is which actually works in 2d array.
         int[] cursor = new int[2];
-        cursor[0] = standard[0] - pointer[1];
-        cursor[1] = standard[1] + pointer[0];
+        cursor[0] = standard[0] - position[1];
+        cursor[1] = standard[1] + position[0];
         return cursor;
     }
     public int[] translateBack(int[] cursor){
-        int[] pointer = new int[2];
-        pointer[0] = cursor[1] - standard[1];
-        pointer[1] = (cursor[0] - standard[0])*-1;
-        return pointer;
+        //Postion is where Character in.
+        int[] position = new int[2];
+        position[0] = cursor[1] - standard[1];
+        position[1] = (cursor[0] - standard[0])*-1;
+        return position;
     }
+    //Move in gameboard.
     public int[] takeOrder(String order, int[] pointer) {
         int[] cursor = translate(pointer);
         int x = cursor[0];
@@ -57,17 +67,20 @@ public class CoordinateOfCharacter {
         }
         return translateBack(cursor);
     }
-    public int[][] makeBoard(int[] board){
-        int[][] gameBoard = new int[board[1]+2][board[0]+2];
-        return makeWall(gameBoard);
+    //Make gameBoard by given nums.
+    public void makeBoard(int[] board){
+        //Make 2D array of map.
+        gameBoard = new int[board[1]+2][board[0]+2];
+        //For exception make wall of -1.
+        makeWall();
     }
-    public int[][] makeWall(int[][] gameBoard){
+    //Cover gameBoard with -1.
+    public void makeWall(){
         for(int i = 0; i < gameBoard.length; i++){
             for(int j = 0; j <gameBoard[0].length; j++){
                 if(i == 0 || i == gameBoard.length-1 || j == 0 || j == gameBoard[0].length-1)
                     gameBoard[i][j] = -1;
             }
         }
-        return gameBoard;
     }
 }
