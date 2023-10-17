@@ -88,6 +88,7 @@ public class TestSet {
         main.test76(1, 13, 1, 6);
         main.test77("a1aa23a", 24);
         main.test78("1", "10", "11");
+        main.test79(new int[]{7, 77, 17}, 4);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -858,7 +859,7 @@ public class TestSet {
             System.out.println("Test76 : X");
         }
     }
-    //Sum every numbers in String.
+    //Sum every number in String.
     private void test77(String my_string, int answer){
         HidingNumbersSum2 hidingNumbersSum2 = new HidingNumbersSum2();
         int test = hidingNumbersSum2.sum(my_string);
@@ -876,6 +877,16 @@ public class TestSet {
             System.out.println("Test78 : PASS");
         } else {
             System.out.println("Test78 : X");
+        }
+    }
+    //Count how many '7' appears in integer array.
+    private void test79(int[] array, int answer){
+        NumbersOfSeven numbersOfSeven = new NumbersOfSeven();
+        int test = numbersOfSeven.numbersOfSeven(array);
+        if (test==answer) {
+            System.out.println("Test79 : PASS");
+        } else {
+            System.out.println("Test79 : X");
         }
     }
 }
