@@ -91,6 +91,7 @@ public class TestSet {
         main.test79(new int[]{7, 77, 17}, 4);
         main.test80("abc1Addfggg4556b", 6, new String[] {"abc1Ad", "dfggg4", "556b"});
         main.test81(new int[][]{{1, 1}, {2, 1}, {2, 2}, {1, 2}}, 1);
+        main.test82(new String[]{"down", "down", "down", "down", "down"}, new int[]{7, 9}, new int[]{0, -4});
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -909,6 +910,16 @@ public class TestSet {
             System.out.println("Test81 : PASS");
         } else {
             System.out.println("Test81 : X");
+        }
+    }
+    //Find out where is character.
+    private void test82(String[] keyinput, int[] board, int[] answer){
+        CoordinateOfCharacter coordinateOfCharacter = new CoordinateOfCharacter();
+        int[] test = coordinateOfCharacter.coordinateOfCharacter(keyinput, board);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test82 : PASS");
+        } else {
+            System.out.println("Test82 : X");
         }
     }
 }
