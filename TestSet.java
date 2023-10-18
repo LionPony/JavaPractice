@@ -96,6 +96,7 @@ public class TestSet {
         main.test84(new String[]{"s", "o", "m", "d"}, new String[]{"moos", "dzx", "smm", "sunmmo", "som"}, 2);
         main.test85(new int[][]{{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 1, 0, 0}, {0, 0, 0, 0, 0}}, 16);
         main.test86(new int[] {11, 7}, 13);
+        main.test87(40, 76);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -966,4 +967,15 @@ public class TestSet {
             System.out.println("Test86 : X");
         }
     }
+    //Translate decimal system to Cursed vileage use.
+    private void test87(int n, int answer){
+        CursedNum3 cursedNum3 = new CursedNum3();
+        int test = cursedNum3.cursedNum3(n);
+        if (test == answer) {
+            System.out.println("Test87 : PASS");
+        } else {
+            System.out.println("Test87 : X");
+        }
+    }
+
 }
