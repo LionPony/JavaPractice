@@ -94,6 +94,8 @@ public class TestSet {
         main.test82(new String[]{"down", "down", "down", "down", "down"}, new int[]{7, 9}, new int[]{0, -4});
         main.test83("x + 1", "x + 1");
         main.test84(new String[]{"s", "o", "m", "d"}, new String[]{"moos", "dzx", "smm", "sunmmo", "som"}, 2);
+        main.test85(new int[][]{{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 1, 0, 0}, {0, 0, 0, 0, 0}}, 16);
+
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -942,6 +944,16 @@ public class TestSet {
             System.out.println("Test84 : PASS");
         } else {
             System.out.println("Test84 : X");
+        }
+    }
+    //Find safe zone.
+    private void test85(int[][] board, int answer){
+        SafeZone safeZone = new SafeZone();
+        int test = safeZone.safeZone(board);
+        if (test == answer) {
+            System.out.println("Test85 : PASS");
+        } else {
+            System.out.println("Test85 : X");
         }
     }
 }
