@@ -92,6 +92,7 @@ public class TestSet {
         main.test80("abc1Addfggg4556b", 6, new String[] {"abc1Ad", "dfggg4", "556b"});
         main.test81(new int[][]{{1, 1}, {2, 1}, {2, 2}, {1, 2}}, 1);
         main.test82(new String[]{"down", "down", "down", "down", "down"}, new int[]{7, 9}, new int[]{0, -4});
+        main.test83("x + 1", "x + 1");
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -920,6 +921,16 @@ public class TestSet {
             System.out.println("Test82 : PASS");
         } else {
             System.out.println("Test82 : X");
+        }
+    }
+    //Make polynomial shorten.
+    private void test83(String polynomial, String answer){
+        PolynomialAdd polynomialAdd = new PolynomialAdd();
+        String test = polynomialAdd.polynomialAdd(polynomial);
+        if (test.equals(answer)) {
+            System.out.println("Test83 : PASS");
+        } else {
+            System.out.println("Test83 : X");
         }
     }
 }
