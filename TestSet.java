@@ -93,6 +93,7 @@ public class TestSet {
         main.test81(new int[][]{{1, 1}, {2, 1}, {2, 2}, {1, 2}}, 1);
         main.test82(new String[]{"down", "down", "down", "down", "down"}, new int[]{7, 9}, new int[]{0, -4});
         main.test83("x + 1", "x + 1");
+        main.test84(new String[]{"s", "o", "m", "d"}, new String[]{"moos", "dzx", "smm", "sunmmo", "som"}, 2);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -931,6 +932,16 @@ public class TestSet {
             System.out.println("Test83 : PASS");
         } else {
             System.out.println("Test83 : X");
+        }
+    }
+    //Find the word can be made by spell in dic.
+    private void test84(String[] spell, String[] dic, int answer){
+        AlienDictionary alienDictionary = new AlienDictionary();
+        int test = alienDictionary.alienDictionary(spell, dic);
+        if (test == answer) {
+            System.out.println("Test84 : PASS");
+        } else {
+            System.out.println("Test84 : X");
         }
     }
 }
