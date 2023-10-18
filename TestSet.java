@@ -97,6 +97,7 @@ public class TestSet {
         main.test85(new int[][]{{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 1, 0, 0}, {0, 0, 0, 0, 0}}, 16);
         main.test86(new int[] {11, 7}, 13);
         main.test87(40, 76);
+        main.test88(new int[][]{{1, 1}, {2, 2}, {3, 3}, {4, 4}}, 1);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -975,6 +976,16 @@ public class TestSet {
             System.out.println("Test87 : PASS");
         } else {
             System.out.println("Test87 : X");
+        }
+    }
+    //Figure out there is parallel lines made by dots.
+    private void test88(int [][] dots, int answer){
+        Parallel parallel = new Parallel();
+        int test = parallel.parallel(dots);
+        if (test == answer) {
+            System.out.println("Test88 : PASS");
+        } else {
+            System.out.println("Test88 : X");
         }
     }
 
