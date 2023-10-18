@@ -95,7 +95,7 @@ public class TestSet {
         main.test83("x + 1", "x + 1");
         main.test84(new String[]{"s", "o", "m", "d"}, new String[]{"moos", "dzx", "smm", "sunmmo", "som"}, 2);
         main.test85(new int[][]{{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 1, 0, 0}, {0, 0, 0, 0, 0}}, 16);
-
+        main.test86(new int[] {11, 7}, 13);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -954,6 +954,16 @@ public class TestSet {
             System.out.println("Test85 : PASS");
         } else {
             System.out.println("Test85 : X");
+        }
+    }
+    //Count cannable triangle.
+    private void test86(int[] sides, int answer){
+        TriangleComplete2 triangleComplete2 = new TriangleComplete2();
+        int test = triangleComplete2.triangleComplete2(sides);
+        if (test == answer) {
+            System.out.println("Test86 : PASS");
+        } else {
+            System.out.println("Test86 : X");
         }
     }
 }
