@@ -98,6 +98,7 @@ public class TestSet {
         main.test86(new int[] {11, 7}, 13);
         main.test87(40, 76);
         main.test88(new int[][]{{1, 1}, {2, 2}, {3, 3}, {4, 4}}, 1);
+        main.test89(1, 512, 1);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -988,5 +989,14 @@ public class TestSet {
             System.out.println("Test88 : X");
         }
     }
-
+    //Distinguish a/b is finite decimal number.
+    private void test89(int a, int b, int answer){
+        FiniteDecimalNumber finiteDecimalNumber = new FiniteDecimalNumber();
+        int test = finiteDecimalNumber.finiteDecimalNumber(a, b);
+        if (test == answer) {
+            System.out.println("Test89 : PASS");
+        } else {
+            System.out.println("Test89 : X");
+        }
+    }
 }
