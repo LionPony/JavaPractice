@@ -99,6 +99,7 @@ public class TestSet {
         main.test87(40, 76);
         main.test88(new int[][]{{1, 1}, {2, 2}, {3, 3}, {4, 4}}, 1);
         main.test89(1, 512, 1);
+        main.test90(new int[][]{{-1, 1}, {1, 3}, {3, 9}}, 0);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -997,6 +998,16 @@ public class TestSet {
             System.out.println("Test89 : PASS");
         } else {
             System.out.println("Test89 : X");
+        }
+    }
+    //Given arrays are lines. Count overlaps.
+    private void test90(int[][] lines, int answer){
+        OverlapLines overlapLines = new OverlapLines();
+        int test = overlapLines.overlapLines(lines);
+        if (test == answer) {
+            System.out.println("Test90 : PASS");
+        } else {
+            System.out.println("Test90 : X");
         }
     }
 }
