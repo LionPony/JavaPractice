@@ -100,6 +100,7 @@ public class TestSet {
         main.test88(new int[][]{{1, 1}, {2, 2}, {3, 3}, {4, 4}}, 1);
         main.test89(1, 512, 1);
         main.test90(new int[][]{{-1, 1}, {1, 3}, {3, 9}}, 0);
+        main.test91(new int[] {600, 400, 300, 200, 700, 800, 100, 900}, 500, new int[]{600, 400, 700, 300, 800, 200, 900, 100});
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -1008,6 +1009,16 @@ public class TestSet {
             System.out.println("Test90 : PASS");
         } else {
             System.out.println("Test90 : X");
+        }
+    }
+    //Sort by nearest number. If same distance small one comes first.
+    private void test91(int[] numlist, int n, int[] answer){
+        SpecialSort specialSort = new SpecialSort();
+        int[] test = specialSort.specialSort(numlist, n);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test91 : PASS");
+        } else {
+            System.out.println("Test91 : X");
         }
     }
 }
