@@ -102,6 +102,7 @@ public class TestSet {
         main.test90(new int[][]{{-1, 1}, {1, 3}, {3, 9}}, 0);
         main.test91(new int[] {600, 400, 300, 200, 700, 800, 100, 900}, 500, new int[]{600, 400, 700, 300, 800, 200, 900, 100});
         main.test92(new String[]{"meosseugi", "1234"}, new String[][] {{"rardss", "123"}, {"yyoom", "1234"}, {"meosseugi", "1234"}}, "login");
+        main.test93(new int[][]{{80, 70}, {90, 50}, {40, 70}, {50, 80}}, new int[]{1, 2, 4, 3});
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -1030,6 +1031,16 @@ public class TestSet {
             System.out.println("Test92 : PASS");
         } else {
             System.out.println("Test92 : X");
+        }
+    }
+    //Ranking average of scores.
+    private void test93(int[][] score, int[] answer){
+        Ranking ranking = new Ranking();
+        int[] test = ranking.ranking(score);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test93 : PASS");
+        } else {
+            System.out.println("Test93 : X");
         }
     }
 }
