@@ -104,6 +104,7 @@ public class TestSet {
         main.test92(new String[]{"meosseugi", "1234"}, new String[][] {{"rardss", "123"}, {"yyoom", "1234"}, {"meosseugi", "1234"}}, "login");
         main.test93(new int[][]{{80, 70}, {90, 50}, {40, 70}, {50, 80}}, new int[]{1, 2, 4, 3});
         main.test94(1999, 222);
+        main.test95("abc", "abc", 0);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -1054,6 +1055,16 @@ public class TestSet {
             System.out.println("Test94 : PASS");
         } else {
             System.out.println("Test94 : X");
+        }
+    }
+    // How many pushes need to make A into B. If cant return -1.
+    private void test95(String A, String B, int answer){
+        PushString pushString = new PushString();
+        int test = pushString.pushString(A, B);
+        if (test == answer) {
+            System.out.println("Test95 : PASS");
+        } else {
+            System.out.println("Test95 : X");
         }
     }
 }
