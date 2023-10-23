@@ -101,6 +101,7 @@ public class TestSet {
         main.test89(1, 512, 1);
         main.test90(new int[][]{{-1, 1}, {1, 3}, {3, 9}}, 0);
         main.test91(new int[] {600, 400, 300, 200, 700, 800, 100, 900}, 500, new int[]{600, 400, 700, 300, 800, 200, 900, 100});
+        main.test92(new String[]{"meosseugi", "1234"}, new String[][] {{"rardss", "123"}, {"yyoom", "1234"}, {"meosseugi", "1234"}}, "login");
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -1019,6 +1020,16 @@ public class TestSet {
             System.out.println("Test91 : PASS");
         } else {
             System.out.println("Test91 : X");
+        }
+    }
+    //Compare db and id_pw. If id, pw pair is in db return login, else return error.
+    private void test92(String[] id_pw, String[][] db, String answer){
+        LoginSuccess loginSuccess = new LoginSuccess();
+        String test = loginSuccess.loginSuccess(id_pw, db);
+        if (test.equals(answer)) {
+            System.out.println("Test92 : PASS");
+        } else {
+            System.out.println("Test92 : X");
         }
     }
 }
