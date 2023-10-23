@@ -103,6 +103,7 @@ public class TestSet {
         main.test91(new int[] {600, 400, 300, 200, 700, 800, 100, 900}, 500, new int[]{600, 400, 700, 300, 800, 200, 900, 100});
         main.test92(new String[]{"meosseugi", "1234"}, new String[][] {{"rardss", "123"}, {"yyoom", "1234"}, {"meosseugi", "1234"}}, "login");
         main.test93(new int[][]{{80, 70}, {90, 50}, {40, 70}, {50, 80}}, new int[]{1, 2, 4, 3});
+        main.test94(1999, 222);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -1041,6 +1042,18 @@ public class TestSet {
             System.out.println("Test93 : PASS");
         } else {
             System.out.println("Test93 : X");
+        }
+    }
+    // If you order 1 chicken you can get 1 coupon.
+    // 10 coupons can be exchanged 1 chicken. And it also gives 1 coupon.
+    // Figure out how many complimentary chickens get when you order chicken.
+    private void test94(int chicken, int answer){
+        ChickenCoupon chickenCoupon = new ChickenCoupon();
+        int test = chickenCoupon.chickenCoupon(chicken);
+        if (test == answer) {
+            System.out.println("Test94 : PASS");
+        } else {
+            System.out.println("Test94 : X");
         }
     }
 }
