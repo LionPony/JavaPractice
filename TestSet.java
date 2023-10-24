@@ -105,6 +105,7 @@ public class TestSet {
         main.test93(new int[][]{{80, 70}, {90, 50}, {40, 70}, {50, 80}}, new int[]{1, 2, 4, 3});
         main.test94(1999, 222);
         main.test95("abc", "abc", 0);
+        main.test96(new int[]{2, 4, 8}, 16);
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -1065,6 +1066,17 @@ public class TestSet {
             System.out.println("Test95 : PASS");
         } else {
             System.out.println("Test95 : X");
+        }
+    }
+    // Given array is arithmetic or geometric sequence.
+    // Find out number which comes after last one in array.
+    private void test96(int[] common, int answer){
+        NextNumber nextNumber = new NextNumber();
+        int test = nextNumber.nextNumber(common);
+        if (test == answer) {
+            System.out.println("Test96 : PASS");
+        } else {
+            System.out.println("Test96 : X");
         }
     }
 }
