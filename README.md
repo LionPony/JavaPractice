@@ -27,3 +27,4 @@ I could use already existing pakages like java.util. but some method ( like sele
 * Next time I could try Junit for unit test.
 * Maven can be also used for dependency management.
   
+![코딩테스트 입문 캘린더](https://github.com/LionPony/JavaPractice/assets/146934556/74b7929d-fb23-43fb-ae6c-d211cbd13554)
