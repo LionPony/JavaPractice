@@ -106,6 +106,7 @@ public class TestSet {
         main.test94(1999, 222);
         main.test95("abc", "abc", 0);
         main.test96(new int[]{2, 4, 8}, 16);
+        main.test97(3, 12, new int[]{3,4,5});
     }
     //Operator.Divide test(num1/num2). It returns share.
     private void test1(int num1, int num2){
@@ -1077,6 +1078,17 @@ public class TestSet {
             System.out.println("Test96 : PASS");
         } else {
             System.out.println("Test96 : X");
+        }
+    }
+    // Total is sum of num consecutive numbers.
+    // Find out consecutive numbers.
+    private void test97(int num, int total, int[] answer){
+        SumOfSuequencialNumbers sumOfSuequencialNumbers = new SumOfSuequencialNumbers();
+        int[] test = sumOfSuequencialNumbers.sumOfSuequencialNumbers(num, total);
+        if (Arrays.equals(test, answer)) {
+            System.out.println("Test97 : PASS");
+        } else {
+            System.out.println("Test97 : X");
         }
     }
 }
